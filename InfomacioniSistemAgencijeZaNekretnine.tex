@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \documentclass{article}
 
 \usepackage[top= 27mm, bottom=27mm, left=25mm, right=25mm]{geometry}
@@ -116,4 +117,138 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 \newpage
 \subsection{\bfseries A\v{z}uriranje pravnih akata}
 
+=======
+\documentclass{article}
+
+\usepackage[top= 27mm, bottom=27mm, left=25mm, right=25mm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+
+\renewcommand{\figurename}{Slika}
+\renewcommand{\contentsname}{Sadr\v{z}aj}
+
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,     %linkovi ka svim odeljcima
+    linkcolor=blue,
+}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+\textup{\Large Univerzitet u Beogradu\\Matemati\v{c}ki fakultet}\\[1.5cm]
+\textup{\Large Grupni projekat iz Infomacionih sistema}\\[0.4cm]
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Informacioni sistem agencije za nekretnine}\\[0.4cm]
+\HRule \\[8.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft}
+\large
+\emph{Autori:}\\
+\textup Ivona Milutinovi\' c\\
+\textup Goran Milenkovi\' c\\
+\textup Katarina \v Zivkovi\' c\\
+\textup Jelena Markovi\' c
+
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{flushright}
+\large
+\emph{Profesor:} \\
+\textup Dr Sa\v sa Malkov\\
+\end{flushright}
+\end{minipage}\\[2cm]
+
+
+{\textup \large \today}\\[1cm]
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{\bfseries Uvod}
+
+\newpage
+\section{\bfseries Analiza sistema}
+
+\newpage
+\subsection{\bfseries Dijagram konteksta celog sistema}
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramKontekstaCelogSistema}\\
+		\caption{Dijagram konteksta celog informacionog sistema}
+		\label{fig:dijagramKontekstaCelogIS}
+	\end{figure}
+
+\newpage
+\subsection{\bfseries Dijagram toka podataka}
+-- Goran
+
+\newpage
+\subsection{\bfseries Akteri}
+
+\indent U informacionom sistemu agencije za nekretnine postoje akteri koji se mogu prvobitno podeliti na dve grupe, to jest, na klijente i zaposlene. Klijenti su grupa koja koristi usluge agencije za nekretnine na slede\' ce na\v {c}ine:\\
+
+\indent {\bfseries 1. Nalogodavac kupac/Nalogodavac zakupac} - osoba koja potra\v {z}uje usluge agenicije radi pronala\v {z}enja odgovaraju\' ce nekretnine za potrebe izdavanja/kupovine. Postoji opcija pretra\v {z}ivanja nekretnina u guest modu, gde je osobi koja pretra\v {z}uje nekretnine, dozvoljeno da pogleda ponude agencije, ali ne i da pristupi procesu odabira nekretnine. Za potrebe biranja, odnosno mogu\' cnosti razgledanja nekretnina, potrebno je da nalogodavac kupac ima registrovani nalog na internet stranici agencije za nekretnine.\\
+
+\indent {\bfseries 2.Nalogodavac prodavac/Nalogodavac zakupodavac} - osoba koja potra\v {z}uje usluge agencije za nekretnine, radi ogla\v {s}avanja na njihovom sajtu i lak\v {s}eg obavljanja procesa prodaje odnosno iznajmljivanja nekretnine koja se nalazi u vlasni\v {s}tvu gore pomenute osobe.\\
+
+Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenuta na\v {c}ina, to jest mo\v {z}e istovremeno imati ulogu i nalogodavca kupca i nalogodavca prodavca. Klijenti koriste usluge agencije za nekretnine preko web stranice pomenute agencije.\\
+
+\indent Zaposleni su osobe zadu\v {z}ene za pru\v {z}anje usluga korisnicima. U zavisnosti od poslova koje obavljaju u okviru agencije za nekretnine dele se na slede\' ce grupe:\\
+
+\indent{\bfseries 1. Aministrator sistema} - osoba koja ima svu odgovornost vezanu za ra\v {c}unarski sistem agencije za nekretnine, odr\v {z}ava internet stranicu i svim u\v {c}esnicima informacionog sistema kontroli\v {s}e pristup bazi podataka radi za\v {s}tite podataka, pravi odgovaraju\' ce rezervne kopije radi sigurnosti podataka u slu\v {c}aju pada sistema. Pod njegovom ulogom odr\v {z}avanja internet stranice podrazumeva se dodavanje novog registrovanog korisnika u bazu podataka, kao i brisanje naloga iz baze podataka odre\dj enog korisnika, postavljanje oglasa na internet stranicu i brisanje odre\dj enog oglasa u slu\v {c}aju rakidanja ugovora ili u slu\v {c}aju zaklju\v {c}ivanja ugovora izme\dj u kupca i prodavca.\\
+
+\indent{\bfseries 2. Agent} - osoba koja radi u agenciji i zadu\v {z}ena je za procenu cene nekretnine, kao i pretra\v {z}ivanja oglasa u cilju \v {s}to boljeg poslovanja agencije kako bi se nalogodavcu zakupcu omogu\' cilo lak\v {s}e pronala\v {z}enje nekretnine koja ispunjava \v {z}eljene zahteve. Tako\dj e nalogodavac zakupac mo\v {z}e potpuno ovlastiti agenta radi pronala\v {z}enja \v {z}eljene nekretnine, kako sam gorepomenuti klijent ne bi morao da samostalno pretra\v {z}uje trenutnu ponudu na tr\v {z}i\v {s}tu. Agent tako\dj e je du\v {z}an da bude prisutan za vreme razgledanja nekretnine za koju je zadu\v {z}en od strane nalogodavca zakupodavca, kao i za vreme razgledanja nekretnine koja odgovara zahtevima nalogodavca zakupca od \v {c}ije strane je anga\v {z}ovan radi pronala\v {z}enja nekretnine koja odgovara zahtevima gorepomenutog zakupca. U slu\v {c}aju zaklju\v {c}ivanja ugovora o kupoprodaji ili o iznajmljivanju nekretnine agent je du\v {z}an da bude pristan prilikom zaklju\v {c}ivanja istog kao osoba koja stoji ispred agencije kojoj sledi procenat za pru\v {z}ene usluge. Pored ovih zadu\v {z}enja agent je du\v {z}an da napise izve\v {s}taj nakon izvr\v {s}enog gledanja stana, kao i nakon zaklju\v {c}ivanja ili raskida ugovora, kako bi agencija imala uvid o njegovom radu.\\
+
+\indent {\bfseries 2. Advokat} - pravno lice zaposleno u agenciji. Zadu\v {z}en je za a\v {z}uriranje pravnih akta vezanih za agenciju, kao i za proveru validnosti dokumenata klijenta, kao i validnosti sklopljenih ugovora.\\ 
+
+\newpage
+\section{\bfseries Slu\v{c}ajevi upotrebe}
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramSlucajevaUpotrebeCelogInformacionogSistema}\\
+		\caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
+		\label{fig:dijagramSlucajevaUpotrebeCelogIS}
+	\end{figure}
+
+\newpage
+\subsection{\bfseries Administracija sistema}
+
+\newpage
+\subsection{\bfseries Aktivnosti s nalozima}
+
+\newpage
+\subsection{\bfseries Postavljanje oglasa}
+
+\newpage
+\subsection{\bfseries Pretra\v{z}ivanje oglasa}
+-- Ivona
+
+\newpage
+\subsection{\bfseries Gledanje stanova}
+
+\newpage
+\subsection{\bfseries Provera ispravnosti dokumenata}
+
+\newpage
+\subsection{\bfseries Zaklju\v{c}enje ugovora}
+
+\newpage
+\subsection{\bfseries Raskid ugovora}
+
+\newpage
+\subsection{\bfseries A\v{z}uriranje pravnih akata}
+
+>>>>>>> df1ead86ffdd6551ffb0dca20de023c5c7f6ddfe
 \end{document}
