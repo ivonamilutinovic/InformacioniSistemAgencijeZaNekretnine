@@ -21,7 +21,7 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \center
 \textup{\Large Univerzitet u Beogradu\\Matemati\v{c}ki fakultet}\\[1.5cm]
-\textup{\Large Seminarski rad iz Infomacionih sistema}\\[0.4cm]
+\textup{\Large Grupni projekat iz Infomacionih sistema}\\[0.4cm]
 
 \HRule \\[0.4cm]
 { \huge \bfseries Informacioni sistem agencije za nekretnine}\\[0.4cm]
@@ -43,7 +43,7 @@
 \begin{flushright}
 \large
 \emph{Profesor:} \\
-\textup Sa\v sa Malkov\\
+\textup Dr Sa\v sa Malkov\\
 \end{flushright}
 \end{minipage}\\[2cm]
 
@@ -63,7 +63,12 @@
 
 \newpage
 \subsection{\bfseries Dijagram konteksta celog sistema}
--- moje
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramKontekstaCelogSistema}\\
+		\caption{Dijagram konteksta celog informacionog sistema}
+		\label{fig:dijagramKontekstaCelogIS}
+	\end{figure}
 
 \newpage
 \subsection{\bfseries Dijagram toka podataka}
@@ -71,9 +76,11 @@
 
 \newpage
 \subsection{\bfseries Akteri}
+
 \indent U informacionom sistemu agencije za nekretnine postoje akteri koji se mogu prvobitno podeliti na dve grupe, to jest, na klijente i zaposlene. Klijenti su grupa koja koristi usluge agencije za nekretnine na slede\' ce na\v {c}ine:\\
 
 \indent {\bfseries 1. Nalogodavac kupac/Nalogodavac zakupac} - osoba koja potra\v {z}uje usluge agenicije radi pronala\v {z}enja odgovaraju\' ce nekretnine za potrebe izdavanja/kupovine. Postoji opcija pretra\v {z}ivanja nekretnina u guest modu, gde je osobi koja pretra\v {z}uje nekretnine, dozvoljeno da pogleda ponude agencije, ali ne i da pristupi procesu odabira nekretnine. Za potrebe biranja, odnosno mogu\' cnosti razgledanja nekretnina, potrebno je da nalogodavac kupac ima registrovani nalog na internet stranici agencije za nekretnine.\\
+
 \indent {\bfseries 2.Nalogodavac prodavac/Nalogodavac zakupodavac} - osoba koja potra\v {z}uje usluge agencije za nekretnine, radi ogla\v {s}avanja na njihovom sajtu i lak\v {s}eg obavljanja procesa prodaje odnosno iznajmljivanja nekretnine koja se nalazi u vlasni\v {s}tvu gore pomenute osobe.\\
 
 Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenuta na\v {c}ina, to jest mo\v {z}e istovremeno imati ulogu i nalogodavca kupca i nalogodavca prodavca. Klijenti koriste usluge agencije za nekretnine preko web stranice pomenute agencije.\\
@@ -81,16 +88,73 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 \indent Zaposleni su osobe zadu\v {z}ene za pru\v {z}anje usluga korisnicima. U zavisnosti od poslova koje obavljaju u okviru agencije za nekretnine dele se na slede\' ce grupe:\\
 
 \indent{\bfseries 1. Aministrator sistema} - osoba koja ima svu odgovornost vezanu za ra\v {c}unarski sistem agencije za nekretnine, odr\v {z}ava internet stranicu i svim u\v {c}esnicima informacionog sistema kontroli\v {s}e pristup bazi podataka radi za\v {s}tite podataka, pravi odgovaraju\' ce rezervne kopije radi sigurnosti podataka u slu\v {c}aju pada sistema. Pod njegovom ulogom odr\v {z}avanja internet stranice podrazumeva se dodavanje novog registrovanog korisnika u bazu podataka, kao i brisanje naloga iz baze podataka odre\dj enog korisnika, postavljanje oglasa na internet stranicu i brisanje odre\dj enog oglasa u slu\v {c}aju rakidanja ugovora ili u slu\v {c}aju zaklju\v {c}ivanja ugovora izme\dj u kupca i prodavca.\\
+
 \indent{\bfseries 2. Agent} - osoba koja radi u agenciji i zadu\v {z}ena je za procenu cene nekretnine, kao i pretra\v {z}ivanja oglasa u cilju \v {s}to boljeg poslovanja agencije kako bi se nalogodavcu zakupcu omogu\' cilo lak\v {s}e pronala\v {z}enje nekretnine koja ispunjava \v {z}eljene zahteve. Tako\dj e nalogodavac zakupac mo\v {z}e potpuno ovlastiti agenta radi pronala\v {z}enja \v {z}eljene nekretnine, kako sam gorepomenuti klijent ne bi morao da samostalno pretra\v {z}uje trenutnu ponudu na tr\v {z}i\v {s}tu. Agent tako\dj e je du\v {z}an da bude prisutan za vreme razgledanja nekretnine za koju je zadu\v {z}en od strane nalogodavca zakupodavca, kao i za vreme razgledanja nekretnine koja odgovara zahtevima nalogodavca zakupca od \v {c}ije strane je anga\v {z}ovan radi pronala\v {z}enja nekretnine koja odgovara zahtevima gorepomenutog zakupca. U slu\v {c}aju zaklju\v {c}ivanja ugovora o kupoprodaji ili o iznajmljivanju nekretnine agent je du\v {z}an da bude pristan prilikom zaklju\v {c}ivanja istog kao osoba koja stoji ispred agencije kojoj sledi procenat za pru\v {z}ene usluge. Pored ovih zadu\v {z}enja agent je du\v {z}an da napise izve\v {s}taj nakon izvr\v {s}enog gledanja stana, kao i nakon zaklju\v {c}ivanja ili raskida ugovora, kako bi agencija imala uvid o njegovom radu.\\
+
 \indent {\bfseries 3. Advokat} - pravno lice zaposleno u agenciji. Zadu\v {z}en je za a\v {z}uriranje pravnih akta vezanih za agenciju, kao i za proveru validnosti dokumenata klijenta, kao i validnosti sklopljenih ugovora.\\ 
 
 \newpage
 \section{\bfseries Slu\v{c}ajevi upotrebe}
--- moje
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramSlucajevaUpotrebeCelogInformacionogSistema}\\
+		\caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
+		\label{fig:dijagramSlucajevaUpotrebeCelogIS}
+	\end{figure}
 
 \newpage
 \subsection{\bfseries Administracija sistema}
-
+\indent Kao \v {s}to je navedeno u tekstu, aministracijom sistema se bavi administrator. Dovoljno je da agencija za nekretnine ima samo jednu osobu koja \' ce obavljati ovaj posao. Na\ {s}a agencija za nekretnine mora posedovati ra\v {c}unarski sistem, kako zbog lak\v {s}eg kori\v {s}\' cenja agencijskih usluga, tako i zbog pretpostavke da \'ce na\v {s}a agencija poslovati isklju\v {c}ivo preko internet stranice. Administrator je du\v {z}an da obavlja slede\' ce poslove:
+\begin{itemize}
+    \item skladi\v {s}ti i odr\v {z}ava bazu podataka nekretnina koje agencija ima u ponudi,\\
+    \item omogu\' cava registraciju korisnika, izmenu podataka korisnika na nalogu stranice, kao i brisanje naloga,\\
+    \item omogu\' cava korisnicima pretragu nekretnina kao i zakazivanje gledanja nekretnina,\\
+    \item vodi evidenciju o zaposlenim agentima u agenciji,\\
+    \item pravi redovne backup-ove baze podataka.\\
+\end{itemize}
+\subsubsection{\bfseries Use Case: Dodavanje novog registrovanog korisnika}
+{\bfseries Akter:} Administrator sistema\\
+{\bfseries Ulaz:} Nema\\
+{\bfseries Izlaz:} Nema\\
+{\bfseries Preduslovi:} Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
+{\bfseries Postuslov:} Novi korisnik je dodat i mo\v {z}e da koristi internet stranicu agencije za nekretnine u potpunosti. Baza je a\v {z}urirana.\\
+{\bfseries Glavni tok:} Administrator prima zahtev za registrovanje novog korisnika i proverava da li je zahtev validan (da li je prijava pravilno popunjena i da li je korisnik uneo validne podatke - email adresa, ime, prezime, adresa ...), u slu\v {c}aju validnosti zahteva, prihvata zahtev za registrovanje i potvr\dj uje unos. Nakon toga, administrator sistema \v {s}alje informacionu email poruku kao potvrdu da je registracija uspe\v {s}no obavljena i novoregistrovanom korisniku sa uputstvima kori\v {s}\' cenja internet stranice.\\
+{\bfseries Alternativni tok:} U slu\v {c}aju da je zahtev nepravilno popunjen administrator \v {s}alje email poruku potencijalno novom korisniku sa napomenom da postoji gre\v {s}ka pri uno\v {s}enju podataka.\\
+\subsubsection{\bfseries Use Case: Izmena podataka agencije}
+{\bfseries Akteri:} Administrator sistema\\
+{\bfseries Ulaz:} Informacije koje treba izmeniti o agenciji\\
+{\bfseries Izlaz:} Informacije o agenciji su izmenjene\\
+{\bfseries Preduslovi:} Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
+{\bfseries Postuslov:} Podaci su izmenjeni. Baza je a\v {z}urirana.\\
+{\bfseries Glavni tok:} Administrator dobija informacije od vlasnika agencije o izmenama koje treba da napravi na internet stranici agencije za nekretnine. Menja \v {z}eljene podatke. Izmenjeni podaci se \v {c}uvaju u bazi i prikazuju na internet stranici agencije.\\
+{\bfseries Alternativni tok:} Nema.\\
+{\bfseries Dodatne informacije :} Podaci koji se menjaju u ovom slu\v {c}aju su: ime agencije, \v {s}ifra, registarski broj agencije, logo ...\\
+\subsubsection{\bfseries Use Case: Izmena oglasa od strane Nalogodavca zakupodavca}
+{\bfseries Akteri:} Administrator sistema i nalogodavac zakupodavac\\
+{\bfseries Ulaz:} Izmene oglasa\\
+{\bfseries Izlaz:} Oglas je izmenjen\\
+{\bfseries Preduslovi:} Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema. Nalogodavac zakupodavac ima pristup internetu i registrovani je korisnik na internet stranici agencije za nekretnine.\\
+{\bfseries Postuslov:} Podaci su izmenjeni. Baza je a\v {z}urirana.\\
+{\bfseries Glavni tok:} Nalogodavac zakupodavac odlazi na svoj oglas, na deo sistema za izmenu podataka o oglasu. Menja \v {z}eljene podatke. Administrator sistema proverava ispravnost podataka. U bazi se \v {c}uvaju izmenjeni podaci o oglasu. Izmenjeni podaci o oglasu se prikazuju na oglasu nalogodavca zakupodavca na internet stranici agencije za nekretnine.\\
+{\bfseries Alternativni tok:} Uneti podaci nisu validni. Administrator sistema \v {s}alje nalogodavcu zakupcu email poruku koja obave\v {s}tava gorepomenutog korisnika da izmene nisu validne i da moraju da se isprave. Nakon ovoga slu\v {c}aj upotrebe se nastavlja od menjanja \v {z}eljenih podataka navedenog u glavnom toku.\\
+{\bfseries Dodatne informacije :} Podaci koji se mogu promeniti u ovom slu\v {c}aju su: cena nekretnine, slike nekretnina ...\\
+\subsubsection{\bfseries Use Case: Izmena informacija naloga registrovanog korisnika}
+{\bfseries Akteri:} Administrator sistema i korisnik\\
+{\bfseries Ulaz:} Izmene naloga\\
+{\bfseries Izlaz:} Nalog je izmenjen\\
+{\bfseries Preduslovi:} Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema. Korisnik ima pristup internetu i registrovani je korisnik na internet stranici agencije za nekretnine.\\
+{\bfseries Postuslov:} Podaci su izmenjeni. Baza je a\v {z}urirana.\\
+{\bfseries Glavni tok:} Korisnik odlazi na svoj nalog, na deo sistema za izmenu podataka o korisniku. Menja \v {z}eljene podatke. Administrator sistema proverava ispravnost podataka. U bazi se \v {c}uvaju izmenjeni podaci o oglasu. Izmenjeni podaci o nalogu se prikazuju na nalogu korisnika na internet stranici agencije za nekretnine.\\
+{\bfseries Alternativni tok:} Uneti podaci nisu validni. Administrator sistema \v {s}alje korisniku email poruku koja obave\v {s}tava gorepomenutog korisnika da izmene nisu validne i da moraju da se isprave. Nakon ovoga slu\v {c}aj upotrebe se nastavlja od menjanja \v {z}eljenih podataka navedenog u glavnom toku.\\
+{\bfseries Dodatne informacije :} Podaci koji se mogu promeniti u ovom slu\v {c}aju su: korisni\v {c}ko ime, \v {s}ifra, adresa, broj telefona, slika ...\\
+\subsubsection{\bfseries Use Case: Pravljenje rezervne kopije baze}
+{\bfseries Akteri:} Administrator sistema\\
+{\bfseries Ulaz:} Nema\\
+{\bfseries Izlaz:} Nema\\
+{\bfseries Preduslovi:} Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
+{\bfseries Postuslov:} Rezervna kopija je uspe\v {s}no napravljena.\\
+{\bfseries Glavni tok:} Ukoliko nema nikakvih velikih obrada nad bazom u datom trenutku pokre\' ce pravljenje rezervne kopije i upisuje vreme kada je rezervna kopija napravljena. U suprtnom mora da sa\v {c}eka da se obrada zavr\v {s}i kako bi mogao da po\v {c}ne sa pravljenjem rezervne kopije.\\
+{\bfseries Alternativni tok:} /\\
 \newpage
 \subsection{\bfseries Aktivnosti s nalozima}
 
@@ -99,7 +163,7 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 
 \newpage
 \subsection{\bfseries Pretra\v{z}ivanje oglasa}
--- moje
+-- Ivona
 
 \newpage
 \subsection{\bfseries Gledanje stanova}
