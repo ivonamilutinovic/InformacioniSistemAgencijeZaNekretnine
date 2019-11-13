@@ -159,7 +159,7 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 {\bfseries Postuslov:} Podaci su izmenjeni. Baza je a\v {z}urirana.\\
 {\bfseries Glavni tok:} Korisnik odlazi na svoj nalog, na deo sistema za izmenu podataka o korisniku. Menja \v {z}eljene podatke. Administrator sistema proverava ispravnost podataka. U bazi se \v {c}uvaju izmenjeni podaci o oglasu. Izmenjeni podaci o nalogu se prikazuju na nalogu korisnika na internet stranici agencije za nekretnine.\\
 {\bfseries Alternativni tok:} Uneti podaci nisu validni. Administrator sistema \v {s}alje korisniku email poruku koja obave\v {s}tava gorepomenutog korisnika da izmene nisu validne i da moraju da se isprave. Nakon ovoga slu\v {c}aj upotrebe se nastavlja od menjanja \v {z}eljenih podataka navedenog u glavnom toku.\\
-{\bfseries Dodatne informacije :} Podaci koji se mogu promeniti u ovom slu\v {c}aju su: korisni\v {c}ko ime, \v {s}ifra, adresa, broj telefona, slika ...\\
+{\bfseries Dodatne informacije :} Podaci koji se mogu promeniti u ovom slu\v {c}aju su: korisni\v {c}ko ime, \v {s}ifra, adresa, broj telefona, slika...\\
 \subsubsection{\bfseries Use Case: Pravljenje rezervne kopije baze}
 {\bfseries Akteri:} Administrator sistema\\
 {\bfseries Ulaz:} Nema\\
@@ -174,7 +174,15 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 
 \newpage
 \subsection{\bfseries Postavljanje oglasa}
--- Ivona
+
+{\bfseries Akteri:} Nalogodavac prodavac / Nalogodavac zakupodavac, Administrator, Agent, Advokat\\
+{\bfseries Ulaz:} Tekst oglasa, slike i video zapisi nekretnine\\
+{\bfseries Izlaz:} Internet prezentacija oglasa\\
+{\bfseries Preduslovi:} Korisnik je registrovan\\
+{\bfseries Postuslov:} Oglas je postavljen na web stranici agencije\\
+{\bfseries Glavni tok:} Nalogodavac prodavac, odnosno Nalogodavac zakupodavac popunjava online formular za dodavanje svoje nekretnine ili se javlja agenciji preko e-meil-a, odnosno kontakt telefona. Nalogodavac priprema dokumenta koji potvr{\dj}uju da je nekretnina njegova i da su svi tro\v{s}ovi regulisani i priprema stan za fotografisanje. Agent pose\'{c}uje Nalogodavca kako bi procenio vrednost stana u odnosu na trenutno stanje na tr\v{z}i\v{s}tu,  preuzeo dokumentaciju koju predaje advokatu na uvid i fotografisao stan. Nakon toga, u roku od 24h se postavlja internet prezentacija oglasa.\\
+{\bfseries Alternativni tok:}  Dokumenta nisu ispravna\\ 
+
 
 \newpage
 \subsection{\bfseries Pretra\v{z}ivanje oglasa}
@@ -187,7 +195,45 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 \subsection{\bfseries Provera ispravnosti dokumenata}
 
 \newpage
-\subsection{\bfseries Zaklju\v{c}enje ugovora}
+\subsection{\bfseries Zaklju\v {c}enje ugovora}
+\indent U ranijem delu smo naveli da postoje \v {c}etiri razli\v {c}ita aktera koji mogu tra\v {z}iti usluge agencije pa samim tim postoje i \v {c}etiri razli\v {c}ita ugovora koje agencija mo\v {z}e sklopiti sa svojim klijentima. \\ 
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca prodavca i agencije uz pla\' canje agencijske provizije}
+
+{\bfseries Akteri:} Nalogodavac prodavac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac prodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca kupca. \\
+{\bfseries Glavni tok:} Nalogodavac prodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca prodavca. Nalogodavac prodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu prodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e kupca, nalogodavac prodavac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem prodavcem ne na\dj e kupca za njegovu nekretninu ugovor se automatski raskida. \\
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupca i agencije bez pla\' canja agencijske provizije }
+{\bfseries Akteri:} Nalogodavac zakupac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac zakupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca zakupodavca. \\
+{\bfseries Glavni tok:} Nalogodavac zakupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupca. Nalogodavac zakupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupodavca, nalogodavac zakupac se obave\v {s}tava o tome. \\
+{\bfseries Alternativni tok:} Nema. \\
+{\bfseries Dodatne informacije:} U ugovoru izme\dj u nalogodavca zakupca i agenta ne postoji definisana provizija pa nalogodavac zakupac mo\v {z}e na neki drugi na\v {c}in na\' ci nalogodavca zakupodavca jer u ugovoru nije definisano da je takva radnja zabranjena. Iz tog razloga u ugovoru postoji \v {c}lan koji ka\v {z}e da u takvoj situaciji nalogodavac zakupac treba odmah raskinuti ugovor sa agencijom. \\
+
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca kupca i agencije uz pla\' canje agencijske provizije}
+{\bfseries Akteri:} Nalogodavac kupac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac kupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca prodavca. \\
+{\bfseries Glavni tok:} Nalogodavac kupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca kupca. Nalogodavac kupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu kupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e prodavca, nalogodavac kupac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem kupcem ne na\dj e prodavca za njegovu nekretninu ugovor se automatski raskida. \\
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupodavca i agencije uz pla\' canje agencijske provizije od strane prodavca}
+{\bfseries Akteri:} Nalogodavac zakupodavac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac zakupodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce traz\v {z}iti nalogodavca zakupca. \\
+{\bfseries Glavni tok:} Nalogodavac zakupodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupodavca. Nalogodavac zakupodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupca, nalogodavac zakupodavac je du\v {z}an da plati agenciji proviziju od 49\% od prve kirije definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u narednih mesec dana od potpisivanja ugovora sa nalogodavcem zakupodavcem ne na\dj e zakupca za njegovu nekretninu ugovor se automatski raskida. \\
+
+
 
 \newpage
 \subsection{\bfseries Raskid ugovora}
