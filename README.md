@@ -1,6 +1,6 @@
 # InformacioniSistemAgencijeZaNekretnine
 
-Projekat pretstavlja informacioni sistem agencije za nekretnine rađen u okviru kursa Infomacioni sistemi.
+Projekat pretstavlja informacioni sistem agencije za nekretnine rađen u okviru kursa Informacioni sistemi.
 
 Link ka overleaf projektu:
 https://www.overleaf.com/read/zwjnnmwmzztt
