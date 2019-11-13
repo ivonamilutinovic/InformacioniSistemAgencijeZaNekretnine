@@ -61,8 +61,9 @@
 \newpage
 \section{\bfseries Analiza sistema}
 
-\newpage
 \subsection{\bfseries Dijagram konteksta celog sistema}
+Na slici \ref{fig:dijagramKontekstaCelogIS} je predstaveljen dijagram konteksta celog sistema. Svi procesi sistema su predstavljeni jednim procesom - {\it Agencija za nekretnine}. Sistem interaguje sa entitetima {\it Nalogodavac kupac/zakupac, Nalogodavac prodavac/zakupodavac, Agent, Administator, Advokat}, skladi\v{s}tiem podataka ({\it Baza Podataka}) i modelom baze podataka ({\it Oglasi na web sajtu}).
+
 \begin{figure}[h]
 		\centering
 		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramKontekstaCelogSistema}\\
@@ -72,7 +73,16 @@
 
 \newpage
 \subsection{\bfseries Dijagram toka podataka}
--- Goran
+
+Na dijagramu toka podataka nivoa 0 glavni proces se deli na cetiri podprocesa - {\it zaključenje ugovora, aktivnost agenta, aktivnost administratora, aktivnost advokata}.
+Dijagramu toka podataka nivoa 1 je predstavljen na slici \ref{fig:dijagramTokaPodatakaIS}. 
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramTokaPodataka}\\
+		\caption{Dijagram toka podataka informacionog sistema}
+		\label{fig:dijagramTokaPodatakaIS}
+	\end{figure}
 
 \newpage
 \subsection{\bfseries Akteri}
@@ -95,16 +105,19 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 
 \newpage
 \section{\bfseries Slu\v{c}ajevi upotrebe}
+
+Na slici \ref{fig:dijagramSlucajevaUpotrebeCelogIS} prikazan je dijagram slu\v{c}ajeva upotrebe celog informacionog sistema. Prikazani su u\v{c}esnici, slu\v{c}ajevi upotrebe, kao i veze izme{dj}u njih.\\
 \begin{figure}[h]
 		\centering
 		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramSlucajevaUpotrebeCelogInformacionogSistema}\\
 		\caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
 		\label{fig:dijagramSlucajevaUpotrebeCelogIS}
-	\end{figure}
+	\end{figure}\\
+U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 
 \newpage
 \subsection{\bfseries Administracija sistema}
-\indent Kao \v {s}to je navedeno u tekstu, aministracijom sistema se bavi administrator. Dovoljno je da agencija za nekretnine ima samo jednu osobu koja \' ce obavljati ovaj posao. Na\ {s}a agencija za nekretnine mora posedovati ra\v {c}unarski sistem, kako zbog lak\v {s}eg kori\v {s}\' cenja agencijskih usluga, tako i zbog pretpostavke da \'ce na\v {s}a agencija poslovati isklju\v {c}ivo preko internet stranice. Administrator je du\v {z}an da obavlja slede\' ce poslove:
+\indent Kao \v {s}to je navedeno u tekstu, administracijom sistema se bavi administrator. Dovoljno je da agencija za nekretnine ima samo jednu osobu koja \' ce obavljati ovaj posao. Na\ {s}a agencija za nekretnine mora posedovati ra\v {c}unarski sistem, kako zbog lak\v {s}eg kori\v {s}\' cenja agencijskih usluga, tako i zbog pretpostavke da \'ce na\v {s}a agencija poslovati isklju\v {c}ivo preko internet stranice. Administrator je du\v {z}an da obavlja slede\' ce poslove:
 \begin{itemize}
     \item skladi\v {s}ti i odr\v {z}ava bazu podataka nekretnina koje agencija ima u ponudi,\\
     \item omogu\' cava registraciju korisnika, izmenu podataka korisnika na nalogu stranice, kao i brisanje naloga,\\
@@ -153,17 +166,19 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 {\bfseries Izlaz:} Nema\\
 {\bfseries Preduslovi:} Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
 {\bfseries Postuslov:} Rezervna kopija je uspe\v {s}no napravljena.\\
-{\bfseries Glavni tok:} Ukoliko nema nikakvih velikih obrada nad bazom u datom trenutku pokre\' ce pravljenje rezervne kopije i upisuje vreme kada je rezervna kopija napravljena. U suprtnom mora da sa\v {c}eka da se obrada zavr\v {s}i kako bi mogao da po\v {c}ne sa pravljenjem rezervne kopije.\\
+{\bfseries Glavni tok:} Ukoliko nema nikakvih velikih obrada nad bazom u datom trenutku, pokre\' ce pravljenje rezervne kopije i upisuje vreme kada je rezervna kopija napravljena. U suprtnom mora da sa\v {c}eka da se obrada zavr\v {s}i kako bi mogao da po\v {c}ne sa pravljenjem rezervne kopije.\\
 {\bfseries Alternativni tok:} /\\
+
 \newpage
 \subsection{\bfseries Aktivnosti s nalozima}
 
 \newpage
 \subsection{\bfseries Postavljanje oglasa}
+-- Ivona
 
 \newpage
 \subsection{\bfseries Pretra\v{z}ivanje oglasa}
--- Ivona
+-- Goran 
 
 \newpage
 \subsection{\bfseries Gledanje stanova}
