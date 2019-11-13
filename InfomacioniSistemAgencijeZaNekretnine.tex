@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 57b51fc1aa09e4b4338481fb5dfdbdb74e137e3a
 \documentclass{article}
 
 \usepackage[top= 27mm, bottom=27mm, left=25mm, right=25mm]{geometry}
@@ -62,8 +65,12 @@
 \newpage
 \section{\bfseries Analiza sistema}
 
-\newpage
 \subsection{\bfseries Dijagram konteksta celog sistema}
+<<<<<<< HEAD
+=======
+Na slici \ref{fig:dijagramKontekstaCelogIS} je predstaveljen dijagram konteksta celog sistema. Svi procesi sistema su predstavljeni jednim procesom - {\it Agencija za nekretnine}. Sistem interaguje sa entitetima {\it Nalogodavac kupac/zakupac, Nalogodavac prodavac/zakupodavac, Agent, Administator, Advokat}, skladi\v{s}tiem podataka ({\it Baza Podataka}) i modelom baze podataka ({\it Oglasi na web sajtu}).
+
+>>>>>>> 57b51fc1aa09e4b4338481fb5dfdbdb74e137e3a
 \begin{figure}[h]
 		\centering
 		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramKontekstaCelogSistema}\\
@@ -73,7 +80,16 @@
 
 \newpage
 \subsection{\bfseries Dijagram toka podataka}
--- Goran
+
+Na dijagramu toka podataka nivoa 0 glavni proces se deli na cetiri podprocesa - {\it zaključenje ugovora, aktivnost agenta, aktivnost administratora, aktivnost advokata}.
+Dijagramu toka podataka nivoa 1 je predstavljen na slici \ref{fig:dijagramTokaPodatakaIS}. 
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramTokaPodataka}\\
+		\caption{Dijagram toka podataka informacionog sistema}
+		\label{fig:dijagramTokaPodatakaIS}
+	\end{figure}
 
 \newpage
 \subsection{\bfseries Akteri}
@@ -96,16 +112,30 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 
 \newpage
 \section{\bfseries Slu\v{c}ajevi upotrebe}
+<<<<<<< HEAD
+=======
+
+Na slici \ref{fig:dijagramSlucajevaUpotrebeCelogIS} prikazan je dijagram slu\v{c}ajeva upotrebe celog informacionog sistema. Prikazani su u\v{c}esnici, slu\v{c}ajevi upotrebe, kao i veze izme{dj}u njih.\\
+>>>>>>> 57b51fc1aa09e4b4338481fb5dfdbdb74e137e3a
 \begin{figure}[h]
 		\centering
 		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramSlucajevaUpotrebeCelogInformacionogSistema}\\
 		\caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
 		\label{fig:dijagramSlucajevaUpotrebeCelogIS}
+<<<<<<< HEAD
 	\end{figure}
 
 \newpage
 \subsection{\bfseries Administracija sistema}
 \indent Kao \v {s}to je navedeno u tekstu, aministracijom sistema se bavi administrator. Dovoljno je da agencija za nekretnine ima samo jednu osobu koja \' ce obavljati ovaj posao. Na\ {s}a agencija za nekretnine mora posedovati ra\v {c}unarski sistem, kako zbog lak\v {s}eg kori\v {s}\' cenja agencijskih usluga, tako i zbog pretpostavke da \'ce na\v {s}a agencija poslovati isklju\v {c}ivo preko internet stranice. Administrator je du\v {z}an da obavlja slede\' ce poslove:
+=======
+	\end{figure}\\
+U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
+
+\newpage
+\subsection{\bfseries Administracija sistema}
+\indent Kao \v {s}to je navedeno u tekstu, administracijom sistema se bavi administrator. Dovoljno je da agencija za nekretnine ima samo jednu osobu koja \' ce obavljati ovaj posao. Na\ {s}a agencija za nekretnine mora posedovati ra\v {c}unarski sistem, kako zbog lak\v {s}eg kori\v {s}\' cenja agencijskih usluga, tako i zbog pretpostavke da \'ce na\v {s}a agencija poslovati isklju\v {c}ivo preko internet stranice. Administrator je du\v {z}an da obavlja slede\' ce poslove:
+>>>>>>> 57b51fc1aa09e4b4338481fb5dfdbdb74e137e3a
 \begin{itemize}
     \item skladi\v {s}ti i odr\v {z}ava bazu podataka nekretnina koje agencija ima u ponudi,\\
     \item omogu\' cava registraciju korisnika, izmenu podataka korisnika na nalogu stranice, kao i brisanje naloga,\\
@@ -154,17 +184,28 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 {\bfseries Izlaz:} Nema\\
 {\bfseries Preduslovi:} Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
 {\bfseries Postuslov:} Rezervna kopija je uspe\v {s}no napravljena.\\
+<<<<<<< HEAD
 {\bfseries Glavni tok:} Ukoliko nema nikakvih velikih obrada nad bazom u datom trenutku pokre\' ce pravljenje rezervne kopije i upisuje vreme kada je rezervna kopija napravljena. U suprtnom mora da sa\v {c}eka da se obrada zavr\v {s}i kako bi mogao da po\v {c}ne sa pravljenjem rezervne kopije.\\
 {\bfseries Alternativni tok:} /\\
+=======
+{\bfseries Glavni tok:} Ukoliko nema nikakvih velikih obrada nad bazom u datom trenutku, pokre\' ce pravljenje rezervne kopije i upisuje vreme kada je rezervna kopija napravljena. U suprtnom mora da sa\v {c}eka da se obrada zavr\v {s}i kako bi mogao da po\v {c}ne sa pravljenjem rezervne kopije.\\
+{\bfseries Alternativni tok:} /\\
+
+>>>>>>> 57b51fc1aa09e4b4338481fb5dfdbdb74e137e3a
 \newpage
 \subsection{\bfseries Aktivnosti s nalozima}
 
 \newpage
 \subsection{\bfseries Postavljanje oglasa}
+-- Ivona
 
 \newpage
 \subsection{\bfseries Pretra\v{z}ivanje oglasa}
+<<<<<<< HEAD
 -- Ivona
+=======
+-- Goran 
+>>>>>>> 57b51fc1aa09e4b4338481fb5dfdbdb74e137e3a
 
 \newpage
 \subsection{\bfseries Gledanje stanova}
@@ -173,7 +214,45 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 \subsection{\bfseries Provera ispravnosti dokumenata}
 
 \newpage
-\subsection{\bfseries Zaklju\v{c}enje ugovora}
+\subsection{\bfseries Zaklju\v {c}enje ugovora}
+\indent U ranijem delu smo naveli da postoje \v {c}etiri razli\v {c}ita aktera koji mogu tra\v {z}iti usluge agencije pa samim tim postoje i \v {c}etiri razli\v {c}ita ugovora koje agencija mo\v {z}e sklopiti sa svojim klijentima. \\ 
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca prodavca i agencije uz pla\' canje agencijske provizije}
+
+{\bfseries Akteri:} Nalogodavac prodavac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac prodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca kupca. \\
+{\bfseries Glavni tok:} Nalogodavac prodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca prodavca. Nalogodavac prodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu prodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e kupca, nalogodavac prodavac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem prodavcem ne na\dj e kupca za njegovu nekretninu ugovor se automatski raskida. \\
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupca i agencije bez pla\' canja agencijske provizije }
+{\bfseries Akteri:} Nalogodavac zakupac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac zakupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca zakupodavca. \\
+{\bfseries Glavni tok:} Nalogodavac zakupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupca. Nalogodavac zakupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupodavca, nalogodavac zakupac se obave\v {s}tava o tome. \\
+{\bfseries Alternativni tok:} Nema. \\
+{\bfseries Dodatne informacije:} U ugovoru izme\dj u nalogodavca zakupca i agenta ne postoji definisana provizija pa nalogodavac zakupac mo\v {z}e na neki drugi na\v {c}in na\' ci nalogodavca zakupodavca jer u ugovoru nije definisano da je takva radnja zabranjena. Iz tog razloga u ugovoru postoji \v {c}lan koji ka\v {z}e da u takvoj situaciji nalogodavac zakupac treba odmah raskinuti ugovor sa agencijom. \\
+
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca kupca i agencije uz pla\' canje agencijske provizije}
+{\bfseries Akteri:} Nalogodavac kupac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac kupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca prodavca. \\
+{\bfseries Glavni tok:} Nalogodavac kupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca kupca. Nalogodavac kupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu kupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e prodavca, nalogodavac kupac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem kupcem ne na\dj e prodavca za njegovu nekretninu ugovor se automatski raskida. \\
+\subsubsection{\bfseries Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupodavca i agencije uz pla\' canje agencijske provizije od strane prodavca}
+{\bfseries Akteri:} Nalogodavac zakupodavac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac zakupodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce traz\v {z}iti nalogodavca zakupca. \\
+{\bfseries Glavni tok:} Nalogodavac zakupodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupodavca. Nalogodavac zakupodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupca, nalogodavac zakupodavac je du\v {z}an da plati agenciji proviziju od 49\% od prve kirije definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u narednih mesec dana od potpisivanja ugovora sa nalogodavcem zakupodavcem ne na\dj e zakupca za njegovu nekretninu ugovor se automatski raskida. \\
+
+
 
 \newpage
 \subsection{\bfseries Raskid ugovora}
@@ -181,4 +260,8 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 \newpage
 \subsection{\bfseries A\v{z}uriranje pravnih akata}
 
+<<<<<<< HEAD
 \end{document}
+=======
+\end{document}
+>>>>>>> 57b51fc1aa09e4b4338481fb5dfdbdb74e137e3a
