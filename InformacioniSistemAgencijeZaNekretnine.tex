@@ -7,7 +7,10 @@
 \usepackage{setspace}
 \usepackage{lmodern}
 \usepackage{longtable}
+<<<<<<< HEAD
 \usepackage{textcomp}
+=======
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
 
 \renewcommand{\figurename}{Slika}
 \renewcommand{\contentsname}{Sadr\v{z}aj}
@@ -363,6 +366,7 @@ Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnost
     \item Administrator sistema
 \end{itemize}\\
 \hline
+<<<<<<< HEAD
 
  % Ulaz
  {\it \bfseries Ulaz} & Nema\\
@@ -380,6 +384,25 @@ Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnost
  {\it \bfseries Postuslov} & Rezervna kopija je uspe\v {s}no napravljena\\
  \hline
 
+=======
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Nema\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Rezervna kopija je uspe\v {s}no napravljena\\
+ \hline
+
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
  % Glavni tok
      %\multicolumn{2}{c}
      {\it \bfseries Glavni tok} &  
@@ -399,6 +422,7 @@ Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnost
  \hline
 \end{tabular}
 \end{center}
+<<<<<<< HEAD
 \newpage
 
 \setstretch{1.2}
@@ -412,7 +436,22 @@ Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnos
 		\caption{Dijagram aktivnosti: Pravljenje rezervne kopije baze}
 		\label{fig:dijagramAktivnostiKopiranjaBaze}
 	\end{figure}
+=======
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
 \newpage
+
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe pravljenje rezervne kopije baze.\\
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/PravljenjeRezervneKopije.jpg}\\
+		\caption{Dijagram aktivnosti: Pravljenje rezervne kopije baze}
+		\label{fig:dijagramAktivnostiKopiranjaBaze}
+	\end{figure}
+
 \subsection{\bfseries \Large Aktivnosti s nalozima}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
@@ -420,7 +459,12 @@ Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnos
 
 \indent Sekcija "Aktivnosti s nalozima" jako usko je povezana sa prethodnom sekcijom "Administracija sistema" s obzirom da glavnu ulogu,u skoro svim slu\v {c}ajevima upotrebe u ove dve sekcija, igra Administrator. Radi podele na logi\v {c}ke celine poslovi administratora se provla\v {c}e kroz nekoliko sekcija slu\v {c}ajeva upotrebe, dok konkretno ova sekcija se bavi samo svim mogu\' cim akcijama koje se mogu sprovesti nad nalogom.\\
 
+<<<<<<< HEAD
 
+=======
+% dod.
+\newpage
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
 \subsubsection{\bfseries \large Use Case: Dodavanje novog registrovanog korisnika/Pravljenje naloga}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
@@ -556,6 +600,59 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeAdministrator} je prikazan dijagram 
     \item Korisnik
 \end{itemize}\\
 \hline
+<<<<<<< HEAD
+=======
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Nema\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e. Korisnik pokre\v {c}e proces slanja zahteva za brisanje naloga.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Korisniku je nalog obrisan.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Korisnik ulazi na svoj profil, u sekciju sa li\v {c}nim podacima.
+         \item Korisnik bira opciju "Obri\v {s}i nalog".
+         \item Sistem bri\v {s}e nalog i sve dodatne informacije vezane za obrisani nalog.
+         \item Sistem obave\v {s}tava korisnika o uspe\v {s}nom brisanju naloga.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & U slu\v {c}aju dola\v {z}enja do gre\v {s}ke pri brisanju naloga, sistem obave\v {s}tava korisnika o neuspelom brisanju i ka\v {z}e mu da poku\v {s}a ponova. Slu\v {c}aj upotrebe se nastavlja od biranja opcije "Obri\v {s} nalogi"(2).\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne infor.} & /\\
+ \hline
+
+
+\end{tabular}
+\end{center}
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe brisanje naloga na zahtev korisnika
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.57\textheight]{Pictures/BrisanjeNalogaNaZahtevKorisnika.jpg}\\
+		\caption{Dijagram aktivnosti: Brisanje naloga na zahtev korisnika}
+		\label{fig:dijagramAktivnostiBrisanjeKorisnik}
+	\end{figure}
+	
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
 
  % Ulaz
  {\it \bfseries Ulaz} & Nema\\
@@ -607,6 +704,68 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktiv
 	\end{figure}
 	
 
+\newpage
+\subsubsection{\bfseries \large Use Case: Izmena informacija naloga registrovanog korisnika}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+    \item Korisnik
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Izmene naloga\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nalog je izmenjen\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema. Korisnik ima pristup internetu i registrovani je korisnik na internet stranici agencije za nekretnine.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Podaci su izmenjeni. Baza je a\v {z}urirana.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Korisnik ulazi na svoj profil, u sekciju sa li\v {c}nim podacima.
+         \item Korisnik bira opciju "Izmeni podatke".
+         \item Korisnik \v {z}eljene podatke
+         \item Administrator sistema provera ispravnost podataka
+         \item Sistem \v {c}uva podatke
+         \item Sistem obave\v {s}tava korisnika o uspe\v {s}nom menjanju informacija sa naloga.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Uneti podaci nisu validni. Administrator sistema obave\v {s}tava sistem da po\v {s}alje korisniku email poruku koja obave\v {s}tava gorepomenutog korisnika da izmene nisu validne i da moraju da se isprave. Nakon ovoga slu\v {c}aj upotrebe se nastavlja od menjanja \v {z}eljenih podataka navedenog u glavnom toku (3).\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne infor.} & Podaci koji se mogu promeniti u ovom slu\v {c}aju su: korisni\v {c}ko ime, \v {s}ifra, adresa, broj telefona, slika...\\
+ \hline
+
+\end{longtable}
+\end{center}
+
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe izmena informacija naloga registrovanog korisnika
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/IzmenaInformacijaNalogaKorisnika.jpg}\\
+		\caption{Dijagram aktivnosti: Izmena informacija naloga registrovanog korisnika}
+		\label{fig:dijagramAktivnostiIzmenaNaloga}
+	\end{figure}
+	
 \newpage
 \subsubsection{\bfseries \large Use Case: Izmena informacija naloga registrovanog korisnika}
 \begin{center}
@@ -826,14 +985,20 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 -- Ivona
+<<<<<<< HEAD
 
+=======
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
     \item Profesionalni fotograf
+<<<<<<< HEAD
     %\item Administrator
+=======
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
     \end{itemize}\\
 \hline
 
@@ -842,6 +1007,7 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
  \hline
  
  % Izlaz
+<<<<<<< HEAD
  {\it \bfseries Izlaz} & Fotografije i video zapisi nekretnine\\
  \hline
  
@@ -855,6 +1021,17 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
  
  % Postuslovi
  {\it \bfseries Postuslov} & Fotografije i video zapisi nekretnine su zabele\v{z}eni\\
+=======
+ {\it \bfseries Izlaz} & Internet prezentacija oglasa\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Korisnik je registrovan\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Oglas je postavljen na web stranici agencije\\
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
  \hline
 
 
@@ -862,13 +1039,22 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
      %\multicolumn{2}{c}
      {\it \bfseries Glavni tok} &  
      \begin{enumerate}
+<<<<<<< HEAD
          \item  Fotograf dolazi na zadatu adresu u dogovorenom terminu. 
          \item  Fotografi\v{s}e i pravi video zapise nekretnine. 
          \item \v{S}alje zabele\v{z}ene materijale administratoru kako bi ih ubacio u bazu. 
+=======
+         \item  Nalogodavac prodavac, odnosno Nalogodavac zakupodavac popunjava online formular za dodavanje svoje nekretnine ili se javlja agenciji preko e-mail-a, odnosno kontakt telefona. 
+         \item  Nalogodavac priprema dokumenta koji potvr{\dj}uju da je nekretnina njegovo vlasni\v{s}tvo i da su svi tro\v{s}ovi regulisani 
+         \item Nalogodavac priprema stan za fotografisanje. 
+         \item  Agent pose\'{c}uje Nalogodavca kako bi procenio vrednost stana u odnosu na trenutno stanje na tr\v{z}i\v{s}tu,  preuzeo dokumentaciju koju predaje advokatu na uvid i fotografisao stan. 
+         \item  Nakon toga, u roku od 24h se postavlja internet prezentacija oglasa.
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
     \end{enumerate}\\
  \hline
 
  % Alternativni tok
+<<<<<<< HEAD
  {\it \bfseries Alternativni tok } & \begin{itemize}
     \item Nikog nije bilo na navedenoj adresi
     \item Materijali su se o\v{s}tetili
@@ -876,10 +1062,33 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
  \hline
  % Dodatne informacije
  {\it \bfseries Dodatne\newline informacije} & Svaka prostorija mora imati barem jednu fotografiju i barem jednu 360{\textdegree}     fotografiju. Fotografije treba da prezentuju aktuelno stanje nekretnine.\\
+=======
+ {\it \bfseries Alternativni tok} & Dokumentacija nisu ispravna\\
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
  \hline
 
 \end{tabular}
 \end{center}
+<<<<<<< HEAD
 \newpage
+=======
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe postavljanja oglasa.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramAktivnosti-PostavljanjeOglasa}\\
+		\caption{Dijagram aktivnosti: Postavljanje oglasa}
+		\label{fig:dijagramAktivnostiPostavljanjeOglasa}
+	\end{figure}
+
+\newpage
+
+
+>>>>>>> d4e3fdabe70b8b2bb8a11f9ab05e29493588463a
 
 \end{document}
