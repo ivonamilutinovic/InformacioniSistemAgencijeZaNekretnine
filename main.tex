@@ -1,0 +1,885 @@
+\documentclass[20pt]{article}
+
+\usepackage[top= 27mm, bottom=27mm, left=25mm, right=25mm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage{longtable}
+
+\renewcommand{\figurename}{Slika}
+\renewcommand{\contentsname}{Sadr\v{z}aj}
+
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,     %linkovi ka svim odeljcima
+    linkcolor=blue,
+}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+\textup{\Large Univerzitet u Beogradu\\Matemati\v{c}ki fakultet}\\[1.5cm]
+\textup{\Large Grupni projekat iz predmeta Informacioni sistemi}\\[0.4cm]
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Informacioni sistem agencije za nekretnine}\\[0.4cm]
+\HRule \\[8.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft}
+\Large
+\emph{Autori:}\\
+Ivona Milutinovi\' c\\
+Goran Milenkovi\' c\\
+Katarina \v Zivkovi\' c\\
+Jelena Markovi\' c
+
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{flushright}
+\Large
+\emph{Profesor:} \\
+Dr Sa\v sa Malkov\\
+\end{flushright}
+\end{minipage}\\[2cm]
+
+
+{\Large \today}\\[1cm]
+\vfill
+
+\end{titlepage}
+
+\newpage
+\setstretch{1.9}
+\setlength{\parindent}{1cm}
+\fontsize{9}{11} \selectfont 
+\tableofcontents
+
+\newpage
+\section{\bfseries \Large Uvod} 
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\indent Kako raste ljudska populacija, rastu i gradovi. Pritom sve je ve\' ca potreba za izgradnjom i prodajom ku\' ca i stanova. Ljudi na razli\v cite na\v cine mogu da se informi\v su o tome da li se negde prodaje neka nekretnina, npr. preko oglasa u novinama. Agencije za nekretnine nude mno\v stvo prednosti u odnosu na ove na\v cine. Recimo, u novinama mo\v ze pisati cena nekretnine, veli\v cina, broj soba, i ta\v cna lokacija, ali ne pi\v su informacije koje su od zna\v caja za kupca, npr. da li je nekretnina kupcu u blizini njegovog posla, \v sta ima okolo na mapi, da li postoji neki glavni put u blizini.\\
+
+
+
+\indent Postavlja se pitanje, za\v sto praviti informacioni sistem za agencije za nekretnine. Postoji vi\v se razloga. Jedan je bezbednost. Bez informacionog sistema, agenti za nekretnine mogu da sa\v cuvaju informacije za sebe,  obezbede nepotrebne usluge, itd. kako bi maksimizovali svoju zaradu. Analogija se mo\v ze napraviti sa drugim zanimanjima, npr. automehani\v car mo\v ze da predlo\v zi kupovinu novog motora za automobil, a da je u su\v stini potrebno zavrnuti jedan \v saf. Takodje, u turisti\v ckoj agenciji, agent mo\v ze da izlista samo skuplje letove.\\
+
+\indent Bez informacionog sistema, stvari funkcioni\v su na slede\' ci na\v cin. Kupac pozove agenta, agent odvede kupca da pogleda nekretninu, ako se kupcu nekretnina ne dopadne, agent ga vodi da vidi slede\' cu. U medjuvremenu, kupac mo\v ze i da promeni agenta. Medjutim, to mu ne daje garanciju da \' ce prona\' ci nekretninu koja mu se dopada. Tro\v si se vreme, novac i strpljenje. \\
+
+\indent Agencije za nekretnine prave spisak nekretnina za prodaju i pokazuju kupcima stanove i ku\' ce koji se nalaze na lokacijama koje kupcu odgovaraju i \v cije su cene procenjene na one vrednosti koje su u granicama koje je kupac zadao. Osnovni posao agenta je da spoji kupce i prodavce, i da ostvari uspe\v snu transakciju kroz pregovore, sastanke, i uspostavljanje dogovora. Agent pritom mora da poznaje odgovaraju\' ce zakonske procedure. Postoji definicija:"Agent za nekretnine je osoba koja posreduje izmedju prodavaca i kupaca nekretnina i nastoji da pronadje potencijalne prodavce i kupce." (Ajaero 2013)\\
+
+\indent Cilj ovog idejnog projekta jeste da napravimo veb aplikaciju koja \' ce omogu\' citi kupcu, da iz fotelje svog doma, pregleda slike i druge karakteristike nekretnina, izdvoji one koje mu se dopadaju, i da u svoje slobodno vreme, zajedno sa agentom obidje ba\v s te nekretnine koje \v zeli.\\
+
+\newpage
+\section{\bfseries \Large Analiza sistema}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\subsection{\bfseries \Large Dijagram konteksta celog sistema}
+Na slici \ref{fig:dijagramKontekstaCelogIS} je predstaveljen dijagram konteksta celog sistema. Svi procesi sistema su predstavljeni jednim procesom - {\it Agencija za nekretnine}. Sistem interaguje sa entitetima {\it Nalogodavac kupac/zakupac, Nalogodavac prodavac/zakupodavac, Agent, Administator, Advokat}, skladi\v{s}tiem podataka ({\it Baza Podataka}) i modelom baze podataka ({\it Oglasi na web sajtu}).
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramKontekstaCelogSistema}\\
+		\caption{Dijagram konteksta celog informacionog sistema}
+		\label{fig:dijagramKontekstaCelogIS}
+	\end{figure}
+
+\newpage
+\subsection{\bfseries \Large Dijagram toka podataka}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+Na dijagramu toka podataka nivoa 0 glavni proces se deli na cetiri podprocesa - {\it zaključenje ugovora, aktivnost agenta, aktivnost administratora, aktivnost advokata}.
+Dijagramu toka podataka nivoa 1 je predstavljen na slici \ref{fig:dijagramTokaPodatakaIS}. 
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramTokaPodataka}\\
+		\caption{Dijagram toka podataka informacionog sistema}
+		\label{fig:dijagramTokaPodatakaIS}
+	\end{figure}
+
+\newpage
+\subsection{\bfseries \Large Akteri}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\indent U informacionom sistemu agencije za nekretnine postoje akteri koji se mogu prvobitno podeliti na dve grupe, to jest, na klijente i zaposlene. Klijenti su grupa koja koristi usluge agencije za nekretnine na slede\' ce na\v {c}ine:\\
+
+\indent {\bfseries 1. Nalogodavac kupac/Nalogodavac zakupac} - osoba koja potra\v {z}uje usluge agenicije radi pronala\v {z}enja odgovaraju\' ce nekretnine za potrebe izdavanja/kupovine. Postoji opcija pretra\v {z}ivanja nekretnina u guest modu, gde je osobi koja pretra\v {z}uje nekretnine, dozvoljeno da pogleda ponude agencije, ali ne i da pristupi procesu odabira nekretnine. Za potrebe biranja, odnosno mogu\' cnosti razgledanja nekretnina, potrebno je da nalogodavac kupac ima registrovani nalog na internet stranici agencije za nekretnine.\\
+
+\indent {\bfseries 2.Nalogodavac prodavac/Nalogodavac zakupodavac} - osoba koja potra\v {z}uje usluge agencije za nekretnine, radi ogla\v {s}avanja na njihovom sajtu i lak\v {s}eg obavljanja procesa prodaje odnosno iznajmljivanja nekretnine koja se nalazi u vlasni\v {s}tvu gore pomenute osobe.\\
+
+Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenuta na\v {c}ina, to jest mo\v {z}e istovremeno imati ulogu i nalogodavca kupca i nalogodavca prodavca. Klijenti koriste usluge agencije za nekretnine preko web stranice pomenute agencije.\\
+
+\indent Zaposleni su osobe zadu\v {z}ene za pru\v {z}anje usluga korisnicima. U zavisnosti od poslova koje obavljaju u okviru agencije za nekretnine dele se na slede\' ce grupe:\\
+
+\indent{\bfseries 1. Administrator sistema} - osoba koja ima svu odgovornost vezanu za ra\v {c}unarski sistem agencije za nekretnine, odr\v {z}ava internet stranicu i svim u\v {c}esnicima informacionog sistema kontroli\v {s}e pristup bazi podataka radi za\v {s}tite podataka, pravi odgovaraju\' ce rezervne kopije radi sigurnosti podataka u slu\v {c}aju pada sistema. Pod njegovom ulogom odr\v {z}avanja internet stranice podrazumeva se dodavanje novog registrovanog korisnika u bazu podataka, kao i brisanje naloga iz baze podataka odre\dj enog korisnika, postavljanje oglasa na internet stranicu i brisanje odre\dj enog oglasa u slu\v {c}aju rakidanja ugovora ili u slu\v {c}aju zaklju\v {c}ivanja ugovora izme\dj u kupca i prodavca.\\
+
+\indent{\bfseries 2. Agent} - osoba koja radi u agenciji i zadu\v {z}ena je za procenu cene nekretnine, kao i pretra\v {z}ivanja oglasa u cilju \v {s}to boljeg poslovanja agencije kako bi se nalogodavcu zakupcu omogu\' cilo lak\v {s}e pronala\v {z}enje nekretnine koja ispunjava \v {z}eljene zahteve. Tako\dj e nalogodavac zakupac mo\v {z}e potpuno ovlastiti agenta radi pronala\v {z}enja \v {z}eljene nekretnine, kako sam gorepomenuti klijent ne bi morao da samostalno pretra\v {z}uje trenutnu ponudu na tr\v {z}i\v {s}tu. Agent tako\dj e je du\v {z}an da bude prisutan za vreme razgledanja nekretnine za koju je zadu\v {z}en od strane nalogodavca zakupodavca, kao i za vreme razgledanja nekretnine koja odgovara zahtevima nalogodavca zakupca od \v {c}ije strane je anga\v {z}ovan radi pronala\v {z}enja nekretnine koja odgovara zahtevima gorepomenutog zakupca. U slu\v {c}aju zaklju\v {c}ivanja ugovora o kupoprodaji ili o iznajmljivanju nekretnine agent je du\v {z}an da bude pristan prilikom zaklju\v {c}ivanja istog kao osoba koja stoji ispred agencije kojoj sledi procenat za pru\v {z}ene usluge. Pored ovih zadu\v {z}enja agent je du\v {z}an da napise izve\v {s}taj nakon izvr\v {s}enog gledanja stana, kao i nakon zaklju\v {c}ivanja ili raskida ugovora, kako bi agencija imala uvid o njegovom radu.\\
+
+\indent {\bfseries 3. Advokat} - pravno lice zaposleno u agenciji. Zadu\v{z}en je za a\v{z}uriranje pravnih akata vezanih za agenciju, proveru validnosti dokumenata klijenta, kao i validnosti sklopljenih ugovora.\\ 
+
+\indent {\bfseries 4. Profesionalni fotograf} - dolazi zajedno sa agentom pre sklapanja ugovora sa Nalogodavcem prodavcem / zakupodavcem i objavljivanja oglasa kako bi napravio profesionalne fotografije i video zapise nekretnine. 
+
+\newpage
+\section{\bfseries \Large Slu\v{c}ajevi upotrebe}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+Na slici \ref{fig:dijagramSlucajevaUpotrebeCelogIS} prikazan je dijagram slu\v{c}ajeva upotrebe celog informacionog sistema. Prikazani su u\v{c}esnici, slu\v{c}ajevi upotrebe, kao i veze izme{dj}u njih.\\
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramSlucajevaUpotrebeCelogInformacionogSistema}\\
+		\caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
+		\label{fig:dijagramSlucajevaUpotrebeCelogIS}
+	\end{figure}\\
+U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
+
+\newpage
+\subsection{\bfseries \Large Administracija sistema}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+
+\indent Kao \v {s}to je navedeno u tekstu, administracijom sistema se bavi administrator. Dovoljno je da agencija za nekretnine ima samo jednu osobu koja \' ce obavljati ovaj posao. Na\v {s}a agencija za nekretnine mora posedovati ra\v {c}unarski sistem, kako zbog lak\v {s}eg kori\v {s}\' cenja agencijskih usluga, tako i zbog pretpostavke da \'ce na\v {s}a agencija poslovati isklju\v {c}ivo preko internet stranice. Administrator je du\v {z}an da obavlja slede\' ce poslove:
+\begin{itemize}
+    \item skladi\v {s}ti i odr\v {z}ava bazu podataka nekretnina koje agencija ima u ponudi,
+    \item omogu\' cava registraciju korisnika, izmenu podataka korisnika na nalogu stranice, kao i brisanje naloga,
+    \item omogu\' cava korisnicima pretragu nekretnina kao i zakazivanje gledanja nekretnina,
+    \item vodi evidenciju o zaposlenim agentima u agenciji,
+    \item pravi redovne backup-ove baze podataka.
+\end{itemize}
+
+\newpage
+\subsubsection{\bfseries \large Use Case: Izmena podataka agencije}
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Informacije koje treba izmeniti o agenciji\\ 
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Informacije o agenciji su izmenjene\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
+ \hline
+
+ % Postuslovi
+ {\it \bfseries Postuslov} & Podaci su izmenjeni. Baza je a\v {z}urirana.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Administrator menja \v {z}eljene informacije o agenciji za nekretnine.
+         \item Sistem \v {c}uva unete podatke.
+         \item  Sistem obave\v {s}tava administratora o uspe\v {s}no napravljenim izmenama podataka.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & /\\
+ \hline
+ 
+  % Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & Podaci koji se menjaju u ovom slu\v {c}aju su: ime agencije, \v {s}ifra, registarski broj agencije, logo ...\\
+ \hline
+
+\end{tabular}
+\end{center}
+\newpage
+
+\subsubsection{\bfseries \large Use Case: Dodavanje novog zaposlenog radnika}
+
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Informacije o novozaposlenom\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Internet prezentacija novozaposlenog \v {c}lana agencije za nekretnine\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema. Administrator ima sve neophodne informacije o zaposlenom.\\
+ \hline
+
+ % Postuslovi
+ {\it \bfseries Postuslovi} & Novi zaposleni je dodat u sistem i dobio je svoj li\v {c}ni nalog. Baza je a\v {z}urirana.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Administrator otvara formu za unos podataka.
+         \item Administrator vr\v {s}i validaciju podataka.
+         \item Administrator bira vrstu zaposlenog: agent, forograf, advokat.
+         \item Administrator unosi neophodne podatke i bira opciju "Dodaj zaposlenog".
+         \item Sistem \v {c}uva unete podatke.
+         \item Sistem \v {s}alje mejl zaposlenom sa linkoom za po\v {c}etno pristupanje nalogu.
+         \item Sistem obave\v {s}tava administratora o uspe\v {s}nom dodavanju novog zaposlenog.
+    \end{enumerate}\\
+ \hline
+% \end{tabular}
+%\end{center}
+%\newpage
+
+%\begin{center}
+%\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Alternativni tok
+% \hline
+ {\it \bfseries Alternativni tok} & 1. Administrator je uo\v {c}io nepravilnost u prikupljenim podacima. Administrator kontaktira zaposlenog kako bi dobio ispravne podatke. Slu\v {c}aj upotrebe se nastavlja od ta\v {c}ke (1).\\
+ & 2. Zaposleni nije dobio mejl za pristupanje svom nalogu. Administrator zahteva od sistema da ponovo po\v {s}alje mejl. Slu\v {c}aj upotrebe se nastavlja od slanja mejla novozaposlenom od strane sistema.\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne infor.} & Podaci koji su neophodni za registraciju novog korisnika su korisni\v {c}ko ime, ime, prezime, mail, telefon, jmbg.\\
+ \hline
+\end{longtable}
+\end{center}
+Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe dodavanje novog zaposlenog radnika.
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.51\textheight]{Pictures/DodavanjeNovogZaposlenogRadnika.jpg}\\
+		\caption{Dijagram aktivnosti: Dodavanje novog zaposlenog radnika}
+		\label{fig:dijagramAktivnostiDodavanjaZaposlenog}
+	\end{figure}
+
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+
+\subsubsection{\bfseries \large Use Case: Izmena oglasa od strane Nalogodavca zakupodavca}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+    \item Nalogodavac zakupodavac
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Izmene oglasa\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Internet prezentacija izmenjenog oglasa\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema. Nalogodavac zakupodavac ima pristup internetu i registrovani je korisnik na internet stranici agencije za nekretnine.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslovi} & Podaci su izmenjeni. Baza je a\v {z}urirana.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Nalogodavac zakupodavac odlazi na svoj oglas.
+         \item Pritiska dugme "Izmeni oglas"
+         \item Menja \v {z}eljene podatke
+         \item Administrator sistema proverava ispravnost podataka.
+         \item Sistem \v {c}uva unete podatke.
+         \item Sistem obave\v {s}tava korisnika o uspe\v {s}nom menjanju oglasa
+         \item Izmenjeni podaci o oglasu se prikazuju na oglasu nalagodavca zakupodavca na internet stranici agencije za nekretnine.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Uneti podaci nisu validni. Administrator obave\v {s}tava sistem da podaci nisu ispravni. Sistem \v {s}alje nalogodavcu zakupcu email poruku koja obave\v {s}tava gorepomenutog korisnika da izmene nisu validne i da moraju da se isprave. Nakon ovoga slu\v {c}aj upotrebe se nastavlja od menjanja \v {z}eljenih podataka navedenog u glavnom toku.(3)\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & Podaci koji se mogu promeniti u ovom slu\v {c}aju su: cena nekretnine, slike nekretnina, itd.\\
+ \hline
+
+\end{longtable}
+\end{center}
+
+Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe izmene oglasa od strane Nalogodavca zakupodavca.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.59\textheight]{Pictures/IzmenaOglasaOdStraneKorisnika.jpg}\\
+		\caption{Dijagram aktivnosti: Izmena oglsa od strane Nalogodavca Zakupodavca}
+		\label{fig:dijagramAktivnostiIzmeneOglasa}
+	\end{figure}
+\newpage
+
+\subsubsection{\bfseries Use Case: Pravljenje rezervne kopije baze}
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Nema\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Rezervna kopija je uspe\v {s}no napravljena\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Administrator proverava da li ima nekih velikih obrada nad bazom u datom trenutku.
+         \item Ukoliko nema pokre\' ce pravljenje rezervne kopije.
+         \item Upisuje vreme kada je rezervna kopija napravljena.
+         \item Sistem \v {c}uva unete podatke.
+         \item Sistem obave\v {s}tava administratora o uspe\v {s}nom pravljenju rezervne kopije baze.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Ukoliko u datom trenutku ima velikih obrada nad bazom, administrator mora da sa\v {c}eka da se obrada zavr\v {s}i kako bi mogao da po\v {c}ne sa pravljenjem rezervne kopije. Slu\v {c}aj upotrebe se nastavlja od stavke 1.\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & /\\
+ \hline
+\end{tabular}
+\end{center}
+\newpage
+
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe pravljenje rezervne kopije baze.\\
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/PravljenjeRezervneKopije.jpg}\\
+		\caption{Dijagram aktivnosti: Pravljenje rezervne kopije baze}
+		\label{fig:dijagramAktivnostiKopiranjaBaze}
+	\end{figure}
+
+\subsection{\bfseries \Large Aktivnosti s nalozima}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\indent Sekcija "Aktivnosti s nalozima" jako usko je povezana sa prethodnom sekcijom "Administracija sistema" s obzirom da glavnu ulogu,u skoro svim slu\v {c}ajevima upotrebe u ove dve sekcija, igra Administrator. Radi podele na logi\v {c}ke celine poslovi administratora se provla\v {c}e kroz nekoliko sekcija slu\v {c}ajeva upotrebe, dok konkretno ova sekcija se bavi samo svim mogu\' cim akcijama koje se mogu sprovesti nad nalogom.\\
+
+% dod.
+\newpage
+\subsubsection{\bfseries \large Use Case: Dodavanje novog registrovanog korisnika/Pravljenje naloga}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+    \item Korisnik
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Nema\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Novi korisnik je dodat i mo\v {z}e da koristi internet stranicu agencije za nekretnine u potpunosti. Baza je a\v {z}urirana.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Korisnik pritiska dugme "Registruj se" na sajtu.
+         \item Korisnik popunjava zahtev za registraciju na sajtu agencije za nekretnine, unose\' ci neophodne li\v {c}ne podatke.
+         \item \v {S}alje zahtev za registraciju.
+         \item Administrator prima zahtev za registrovanje novog korisnika.
+         \item Administrator proverava da li je zahtev validan (da li je prijava pravilno popunjena i da li je korisnik uneo validne podatke - email adresa, ime, prezime, adresa ...)
+         \item Administrator prihvata zahtev za registrovanje i potvr\dj uje unos.
+         \item Sistem \v {c}uva unete podatke.
+         \item Sistem \v {s}alje informacionu email poruku korisniku kao potvrdu da je registracija uspe\v {s}no obavljena sa uputstvima kori\v {s}\' cenja internet stranice.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & U slu\v {c}aju da je zahtev nepravilno popunjen sistem \v {s}alje email poruku potencijalno novom korisniku sa napomenom da postoji gre\v {s}ka pri uno\v {s}enju podataka. Slu\v {c}aj upotrebe se nastavlja od popunjavanja zahteva za registraciju (2).\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne infor.} & Podaci koji su neophodni za registraciju novog korisnika su korisni\v {c}ko ime, ime, prezime, mail, telefon, jmbg.\\
+ \hline
+\end{longtable}
+\end{center}
+ 
+ \newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe dodavanje novog registrovanog korisnika.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/DodavanjeNovogRegistrovanogKorisnika.jpg}\\
+		\caption{Dijagram aktivnosti: Dodavanje novog registrovanog korisnika/pravljenje naloga}
+		\label{fig:dijagramAktivnostiDodavanjeKorisnika}
+	\end{figure}
+\newpage
+\newpage
+\subsubsection{\bfseries \large Use Case: Brisanje naloga usled neadekvatnog kori\v {s}\' cenja ili davanja otkaza zaposlenog}
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Nema\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema. Administrator zna korisni\v {c}ko ime osobe kojoj \v {z}eli da obri\v {s}e nalog.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Korisniku je nalog obrisan.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Administrator otvara stranicu za pretra\v {z}ivanje sistema
+         \item Administrator unosi korini\v {c}ko ime naloga koji \v {z}eli da obri\v {s}e.
+         \item Administratori bira opciju "Obri\v {s}i".
+         \item Sistem bri\v {s}e nalog i sve dodatne informacije vezane za obrisani nalog.
+         \item Sistem obave\v {s}tava administratora o uspe\v {s}nom brisanju naloga.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & U slu\v {c}aju dola\v {z}enja do gre\v {s}ke pri brisanju naloga, sistem obave\v {s}tava administratora o neuspelom brisanju i ka\v {z}e mu da poku\v {s}a ponova. Slu\v {c}aj upotrebe se nastavlja od biranja opcije "Obri\v {s}i"(3).\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne infor.} & /\\
+ \hline
+
+\end{tabular}
+\end{center}
+
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiBrisanjeAdministrator} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe brisanje naloga usleg neadekvatnog kori\v {s}\' cenja korisnika/ davanja otkaza zaposlenog.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.60\textheight]{Pictures/BrisanjeNalogaUsledNeadekvatnogKoriscenja.jpg}\\
+		\caption{Dijagram aktivnosti: Brisanje naloga od strane administratora}
+		\label{fig:dijagramAktivnostiBrisanjeAdministrator}
+	\end{figure}
+	
+\newpage
+\subsubsection{\bfseries\large Use Case: Brisanje naloga na zahtev korisnika}
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Korisnik
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Nema\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e. Korisnik pokre\v {c}e proces slanja zahteva za brisanje naloga.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Korisniku je nalog obrisan.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Korisnik ulazi na svoj profil, u sekciju sa li\v {c}nim podacima.
+         \item Korisnik bira opciju "Obri\v {s}i nalog".
+         \item Sistem bri\v {s}e nalog i sve dodatne informacije vezane za obrisani nalog.
+         \item Sistem obave\v {s}tava korisnika o uspe\v {s}nom brisanju naloga.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & U slu\v {c}aju dola\v {z}enja do gre\v {s}ke pri brisanju naloga, sistem obave\v {s}tava korisnika o neuspelom brisanju i ka\v {z}e mu da poku\v {s}a ponova. Slu\v {c}aj upotrebe se nastavlja od biranja opcije "Obri\v {s} nalogi"(2).\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne infor.} & /\\
+ \hline
+
+
+\end{tabular}
+\end{center}
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe brisanje naloga na zahtev korisnika
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.57\textheight]{Pictures/BrisanjeNalogaNaZahtevKorisnika.jpg}\\
+		\caption{Dijagram aktivnosti: Brisanje naloga na zahtev korisnika}
+		\label{fig:dijagramAktivnostiBrisanjeKorisnik}
+	\end{figure}
+	
+
+\newpage
+\subsubsection{\bfseries \large Use Case: Izmena informacija naloga registrovanog korisnika}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Administrator sistema
+    \item Korisnik
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Izmene naloga\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nalog je izmenjen\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Ra\v {c}unarski sistem ispravno funkcioni\v {s}e, kao i da je administrator sistema kvalifikovan da obavi sve zadatke odr\v {z}avanja ra\v {c}unarskog sistema. Korisnik ima pristup internetu i registrovani je korisnik na internet stranici agencije za nekretnine.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Podaci su izmenjeni. Baza je a\v {z}urirana.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Korisnik ulazi na svoj profil, u sekciju sa li\v {c}nim podacima.
+         \item Korisnik bira opciju "Izmeni podatke".
+         \item Korisnik \v {z}eljene podatke
+         \item Administrator sistema provera ispravnost podataka
+         \item Sistem \v {c}uva podatke
+         \item Sistem obave\v {s}tava korisnika o uspe\v {s}nom menjanju informacija sa naloga.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Uneti podaci nisu validni. Administrator sistema obave\v {s}tava sistem da po\v {s}alje korisniku email poruku koja obave\v {s}tava gorepomenutog korisnika da izmene nisu validne i da moraju da se isprave. Nakon ovoga slu\v {c}aj upotrebe se nastavlja od menjanja \v {z}eljenih podataka navedenog u glavnom toku (3).\\
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne infor.} & Podaci koji se mogu promeniti u ovom slu\v {c}aju su: korisni\v {c}ko ime, \v {s}ifra, adresa, broj telefona, slika...\\
+ \hline
+
+\end{longtable}
+\end{center}
+
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe izmena informacija naloga registrovanog korisnika
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/IzmenaInformacijaNalogaKorisnika.jpg}\\
+		\caption{Dijagram aktivnosti: Izmena informacija naloga registrovanog korisnika}
+		\label{fig:dijagramAktivnostiIzmenaNaloga}
+	\end{figure}
+	
+\newpage
+\subsection{\bfseries \Large Postavljanje oglasa}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac prodavac / Nalogodavac zakupodavac
+    \item Administrator
+    \item Agent
+    \item Advokat 
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Tekst oglasa, slike i video zapisi nekretnine\\   
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Internet prezentacija oglasa\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Korisnik je registrovan\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Oglas je postavljen na web stranici agencije\\
+ \hline
+
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Nalogodavac prodavac, odnosno Nalogodavac zakupodavac popunjava online formular za dodavanje svoje nekretnine ili se javlja agenciji preko e-mail-a, odnosno kontakt telefona. 
+         \item  Nalogodavac priprema dokumenta koji potvr{\dj}uju da je nekretnina njegovo vlasni\v{s}tvo i da su svi tro\v{s}ovi regulisani 
+         \item Nalogodavac priprema stan za fotografisanje. 
+         \item  Agent pose\'{c}uje Nalogodavca kako bi procenio vrednost stana u odnosu na trenutno stanje na tr\v{z}i\v{s}tu,  preuzeo dokumentaciju koju predaje advokatu na uvid i fotografisao stan. 
+         \item  Nakon toga, u roku od 24h se postavlja internet prezentacija oglasa.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Dokumenta nisu ispravna\\
+ \hline
+
+\end{tabular}
+\end{center}
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe postavljanja oglasa.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramAktivnosti-PostavljanjeOglasa}\\
+		\caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
+		\label{fig:dijagramAktivnostiPostavljanjeOglasa}
+	\end{figure}
+
+\newpage
+\subsection{\bfseries \Large Pretra\v{z}ivanje oglasa}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+-- Goran 
+
+\newpage
+\subsection{\bfseries \Large Gledanje stanova}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+
+
+
+\newpage
+\subsection{\bfseries \Large Provera ispravnosti dokumenata}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+--Jelena
+
+
+\newpage
+\subsection{\bfseries \Large Zaklju\v {c}enje ugovora}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\indent U ranijem delu smo naveli da postoje \v {c}etiri razli\v {c}ita aktera koji mogu tra\v {z}iti usluge agencije pa samim tim postoje i \v {c}etiri razli\v {c}ita ugovora koje agencija mo\v {z}e sklopiti sa svojim klijentima. \\ 
+\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca prodavca i agencije uz pla\' canje agencijske provizije}
+
+{\bfseries Akteri:} Nalogodavac prodavac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac prodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca kupca. \\
+{\bfseries Glavni tok:} Nalogodavac prodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca prodavca. Nalogodavac prodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu prodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e kupca, nalogodavac prodavac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem prodavcem ne na\dj e kupca za njegovu nekretninu ugovor se automatski raskida. \\
+\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupca i agencije bez pla\' canja agencijske provizije }
+{\bfseries Akteri:} Nalogodavac zakupac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac zakupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca zakupodavca. \\
+{\bfseries Glavni tok:} Nalogodavac zakupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupca. Nalogodavac zakupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupodavca, nalogodavac zakupac se obave\v {s}tava o tome. \\
+{\bfseries Alternativni tok:} Nema. \\
+{\bfseries Dodatne informacije:} U ugovoru izme\dj u nalogodavca zakupca i agenta ne postoji definisana provizija pa nalogodavac zakupac mo\v {z}e na neki drugi na\v {c}in na\' ci nalogodavca zakupodavca jer u ugovoru nije definisano da je takva radnja zabranjena. Iz tog razloga u ugovoru postoji \v {c}lan koji ka\v {z}e da u takvoj situaciji nalogodavac zakupac treba odmah raskinuti ugovor sa agencijom. \\
+
+\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca kupca i agencije uz pla\' canje agencijske provizije}
+{\bfseries Akteri:} Nalogodavac kupac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac kupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca prodavca. \\
+{\bfseries Glavni tok:} Nalogodavac kupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca kupca. Nalogodavac kupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu kupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e prodavca, nalogodavac kupac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem kupcem ne na\dj e prodavca za njegovu nekretninu ugovor se automatski raskida. \\
+\subsubsection{\bfseries \Large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupodavca i agencije uz pla\' canje agencijske provizije od strane prodavca}
+{\bfseries Akteri:} Nalogodavac zakupodavac i agent\\
+{\bfseries Ulaz:} Potrebna dokumenta\\
+{\bfseries Izlaz:} Potpisan ugovor\\
+{\bfseries Preduslovi:} Nalogodavac zakupodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce traz\v {z}iti nalogodavca zakupca. \\
+{\bfseries Glavni tok:} Nalogodavac zakupodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupodavca. Nalogodavac zakupodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupca, nalogodavac zakupodavac je du\v {z}an da plati agenciji proviziju od 49\% od prve kirije definisanu ugovorom. \\
+{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u narednih mesec dana od potpisivanja ugovora sa nalogodavcem zakupodavcem ne na\dj e zakupca za njegovu nekretninu ugovor se automatski raskida. \\
+
+
+
+\newpage
+\subsection{\bfseries \Large Raskid ugovora}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+--Goran
+
+\newpage
+\subsection{\bfseries \Large A\v{z}uriranje pravnih akata}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+--Goran
+
+\newpage
+\subsection{\bfseries \Large Fotografisanje nekretnine}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+-- Ivona
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Profesionalni fotograf
+    \end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Adresa nekretnine\\   
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Internet prezentacija oglasa\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Korisnik je registrovan\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Oglas je postavljen na web stranici agencije\\
+ \hline
+
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Nalogodavac prodavac, odnosno Nalogodavac zakupodavac popunjava online formular za dodavanje svoje nekretnine ili se javlja agenciji preko e-mail-a, odnosno kontakt telefona. 
+         \item  Nalogodavac priprema dokumenta koji potvr{\dj}uju da je nekretnina njegovo vlasni\v{s}tvo i da su svi tro\v{s}ovi regulisani 
+         \item Nalogodavac priprema stan za fotografisanje. 
+         \item  Agent pose\'{c}uje Nalogodavca kako bi procenio vrednost stana u odnosu na trenutno stanje na tr\v{z}i\v{s}tu,  preuzeo dokumentaciju koju predaje advokatu na uvid i fotografisao stan. 
+         \item  Nakon toga, u roku od 24h se postavlja internet prezentacija oglasa.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Dokumentacija nisu ispravna\\
+ \hline
+
+\end{tabular}
+\end{center}
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe postavljanja oglasa.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramAktivnosti-PostavljanjeOglasa}\\
+		\caption{Dijagram aktivnosti: Postavljanje oglasa}
+		\label{fig:dijagramAktivnostiPostavljanjeOglasa}
+	\end{figure}
+
+\newpage
+
+
+
+\end{document}
