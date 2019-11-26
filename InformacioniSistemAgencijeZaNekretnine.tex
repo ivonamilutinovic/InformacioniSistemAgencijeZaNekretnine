@@ -807,8 +807,60 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 		\label{fig:dijagramAktivnostiOnlineZakazivanjeGledanja}
 	\end{figure}
 
+\newpage
+\subsection{\bfseries \Large Gledanje stanova}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+\subsubsection{\bfseries \large Use Case: Obilazak nekretnine}
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac kupac / Nalogodavac zakupac
+    \item Agent
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz i Izlaz} & Nema\\   
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Nalogodavac prodavac / nalogodavac zakupodavac je obave\v sten o terminu gledanja nekretnine.\\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Nalogodavac kupac / nalogodavac zakupac je zajedno sa agentom obi\v sao nekretninu. Sa spiska \v zelja kupca / zakupca u sistemu skida se nekretnina koja je pregledana.\\
+ \hline
 
 
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Agent proverava u sistemu da nije slu\v cajno u medjuvremenu nalogodavac kupac / nalogodavac otkazao gledanje nekretnine
+         \item  Agent poziva nalogodavca kupca / zakupca mobilnim telefonom da dobije potvrdu dolaska
+         \item  Nalogodavac kupac / nalogodavac zakupac potvrdjuje svoj dolazak
+         \item  Nalogodavac kupac / nalogodavac zakupac dolazi na adresu gde se nekretnina nalazi, gde se sastaje sa agentom.
+         \item Agent obilazi nekretninu sa kupcem / zakupcem.
+         \item Nalogodavac kupac / nalogodavac zakupac odlu\v cuje da kupi / zakupi nekretninu. Prelazi se na use case "Zaklju\v civanje ugovora".
+    \end{enumerate}\\
+ \hline
+\end{tabular}
+\end{center}
+
+ % Alternativni tok
+\textbf{\textit{Alternativni tokovi}}: Ako je kupac / zakupac u medjuvremenu otkazao gledanje nekretnine, agent mo\v ze da se posveti drugim klijentima koji su zakazani za taj dan. Ako se kupac / zakupac ne javlja na mobilni telefon, agent ne dolazi na predvidjenu adresu, i kupac / zakupac je prinudjen da sam izvr\v si obilazak. Ako kupac / zakupac ne dodje u zakazanom terminom, najpre mu se \v salje mejl ili se on kontaktira telefonom. Ukoliko je bio opravdano spre\v cen, nudi mu se drugi termin, u suprotnom se smatra da zloupotrebljava svoj nalog i prelazi se na use case "Brisanje naloga". Ako kupac / zakupac ne \v zeli da kupi / zakupi nekretninu, ponavlja se \v citav postupak za druge nekretnine koje su na njegovom spisku u sistemu.  \\
+ 
+\newpage
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{a2.png}\\
+		\caption{Dijagram aktivnosti: Obilazak nekretnine}
+		\label{fig:dijagramAktivnostiObilazakNekretnine}
+	\end{figure}
 \newpage
 \subsection{\bfseries \Large Provera ispravnosti dokumenata}
 \setstretch{1.2}
