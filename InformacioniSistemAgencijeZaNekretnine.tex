@@ -791,14 +791,16 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 % Dodatne informacije
  {\it \bfseries Dodatne\newline informacije} & Korisnik prilikom izbora pretrage uno\v {s}enjem parametara nije u obavezi da unese sve parametre. Za parametre koje ne unese podrazumeva se da mu nisu bitni prilikom pretrage. Sortiranje mo\v {z}e biti po datumu oglasa, ceni ili veli\v {c}ini nekretnine po rastu\' cem ili opadaju\' cem redosledu.\\
  \hline
-
-
+\newline
 \end{longtable}
 \end{center}
+
+
 
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
+
 Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe pretra\v {z}ivanja oglasa.
 
 \begin{figure}[h]
@@ -929,7 +931,102 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
---Jelena
+\subsubsection{\bfseries \large Use Case: Provera uknji\v zenosti nekretnine}
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac prodavac / nalogodavac zakupodavac
+    \item Advokat
+\end{itemize}\\
+\hline
+
+% Opis
+ {\it \bfseries Kratak opis} & Proverava se da li je nekretnina uknji\v zena. U Srbiji trenutno postoji mogu\' cnost da bude uknji\v zena u katastru ili u zemlji\v snim knjigama, ali se te\v zi da se predje na katastar u potpunosti. Razlog za to je \v sto je prakti\v cno nemogu\' ce uknji\v ziti nekretninu u zemlji\v sne knjige, jer je potrebno dostaviti svaki papir kako je stan od prethodnog vlasnika do\v sao u posed sada\v snjeg.\\ 
+ \hline
+ 
+ % Ulaz
+ {\it \bfseries Ulaz} & Dokumenta o uknjizenju nekretnine, ako ih prodavac / zakupodavac poseduje.\\ 
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Postoji potencijalni kupac / zakupac date nekretnine.\\
+ \hline
+
+ % Postuslovi
+ {\it \bfseries Postuslov} & Registrovana je informacija o uknji\v zenosti nekretnine.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+        \item Nalogodavac prodavac / nalogodavac zakupac dostavlja dokumenta o uknji\v zenosti nekretnine.
+        \item Advokat provera da li je nekretnina uknji\v zena u zemlji\v sne knjige ili u katastru nepokretnosti.
+        \item Advokat registruje da je nekretnina uknji\v zena 
+        \item Advokat proverava da li nekretnina ima tereta 
+        \item Advokat registruje da nekretnina nema tereta i prelazi se na use case "Provera vlasni\v stva"
+    \end{enumerate}\\
+ \hline
+
+\end{tabular}
+\end{center}
+
+ % Alternativni tok
+\textbf{\textit{Alternativni tokovi}}: Ako nekretnina nije uknji\v zena i ako je nekretnina ste\v cena na osnovu zakona (a ovde \' ce to agencija omogu\' citi), teret dokazivanja pravnog sleda nije na kupcu, i on se registruje kao novi vlasnik. U tom smislu, u ovom slu\v caju prodavac ne mora ni\v sta da radi i postupak se nastavlja od ta\v cke 4. Ako nekretnina ima tereta, advokat obave\v stava prodavca / zakupca da namiri svoje poreske obaveze. Ako prodavac / zakupac namiri svoje obaveze, prelazi se na ta\v cku 5. Ako prodavac / zakupac ne namiri svoje obaveze, postupak se prekida, smatra se da prodavac / zakupac zloupotrebljava svoj nalog i nalog se uklanja. \\
+
+\newpage
+\subsubsection{\bfseries \large Use Case: Provera vlasni\v stva}
+\begin{center}
+\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac prodavac / nalogodavac zakupodavac
+    \item Advokat
+\end{itemize}\\
+\hline
+
+% Opis
+ {\it \bfseries Kratak opis} & Proveravaju se informacije o vlasni\v stvu kako bi se utvrdilo da ne postoji tre\' ce lice koje bi u skladu sa zakonom moglo da obori ugovor zaklu\v cen izmedju prodavca i kupca, odnosno zakupodavca i zakupca.\\ 
+ \hline
+ 
+ % Ulaz
+ {\it \bfseries Ulaz} & Dokumenta o vlasni\v stvu nekretnine, ako ih prodavac / zakupodavac poseduje.\\ 
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Nema\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Postoji potencijalni kupac / zakupac date nekretnine.\\
+ \hline
+
+ % Postuslovi
+ {\it \bfseries Postuslov} & Registrovane su informacije o vlasni\v stvu nekretnine.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+        \item Nalogodavac prodavac / nalogodavac zakupodavac je jedini vlasnik nekretnine i nema bra\v cnog druga
+        \item Advokat registruje da je sve u redu sa vlasni\v stvom
+        i prelazi se na use case "Zaklju\v cenje ugovora"
+    \end{enumerate}\\
+ \hline
+% Alternativni tok
+ {\it \bfseries Alternativni tok} & U slu\v caju da prodavac / zakupodavac ima bra\v cnog druga, on dostavlja potpisanu izjavu o saglasnosti bra\v cnog druga sa prodajom / izdavanjem nekretnine advokatu. Ako jo\v s neko ima pravo na nekretninu, radi se o do\v zivotnom izdr\v zavanju ili o ugovoru o poklonu. Ako je u pitanju ugovor o poklonu, potrebno je tra\v ziti i saglasnost drugog deteta ili naslednika ako ga ima. Ako je u pitanju do\v zivotno izdr\v zavanje treba pogledati i imovinsku raspravu. \\
+ \hline
+\end{tabular}
+\end{center}
+
 
 
 \newpage
@@ -1046,6 +1143,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
   % Dodatne informacije
  {\it \bfseries Dodatne\newline informacije} & U ugovoru izme\dj u nalogodavca zakupca i agenta ne postoji definisana provizija pa nalogodavac zakupac mo\v {z}e na neki drugi na\v {c}in na\' ci nalogodavca zakupodavca jer u ugovoru nije definisano da je takva radnja zabranjena. Iz tog razloga u ugovoru postoji \v {c}lan koji ka\v {z}e da u takvoj situaciji nalogodavac zakupac treba odmah raskinuti ugovor sa agencijom.\\
  \hline
+\newline
 
 \end{longtable}
 \end{center}
@@ -1229,7 +1327,6 @@ Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdAgencije} je prikazan dijagra
 		\caption{Dijagram aktivnosti: Raskid ugovora od strane agencije}
 		\label{fig:dijagramAktivnostiRaskidUgovoraOdAgencije}
 	\end{figure}
-
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
