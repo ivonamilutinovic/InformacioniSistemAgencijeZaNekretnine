@@ -808,7 +808,6 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 	\end{figure}
 
 \newpage
-\subsection{\bfseries \Large Gledanje stanova}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
@@ -875,43 +874,223 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 
+
 \indent U ranijem delu smo naveli da postoje \v {c}etiri razli\v {c}ita aktera koji mogu tra\v {z}iti usluge agencije pa samim tim postoje i \v {c}etiri razli\v {c}ita ugovora koje agencija mo\v {z}e sklopiti sa svojim klijentima. \\ 
 \subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca prodavca i agencije uz pla\' canje agencijske provizije}
 
-{\bfseries Akteri:} Nalogodavac prodavac i agent\\
-{\bfseries Ulaz:} Potrebna dokumenta\\
-{\bfseries Izlaz:} Potpisan ugovor\\
-{\bfseries Preduslovi:} Nalogodavac prodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
-{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca kupca. \\
-{\bfseries Glavni tok:} Nalogodavac prodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca prodavca. Nalogodavac prodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu prodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e kupca, nalogodavac prodavac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
-{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem prodavcem ne na\dj e kupca za njegovu nekretninu ugovor se automatski raskida. \\
-\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupca i agencije bez pla\' canja agencijske provizije }
-{\bfseries Akteri:} Nalogodavac zakupac i agent\\
-{\bfseries Ulaz:} Potrebna dokumenta\\
-{\bfseries Izlaz:} Potpisan ugovor\\
-{\bfseries Preduslovi:} Nalogodavac zakupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
-{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca zakupodavca. \\
-{\bfseries Glavni tok:} Nalogodavac zakupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupca. Nalogodavac zakupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupodavca, nalogodavac zakupac se obave\v {s}tava o tome. \\
-{\bfseries Alternativni tok:} Nema. \\
-{\bfseries Dodatne informacije:} U ugovoru izme\dj u nalogodavca zakupca i agenta ne postoji definisana provizija pa nalogodavac zakupac mo\v {z}e na neki drugi na\v {c}in na\' ci nalogodavca zakupodavca jer u ugovoru nije definisano da je takva radnja zabranjena. Iz tog razloga u ugovoru postoji \v {c}lan koji ka\v {z}e da u takvoj situaciji nalogodavac zakupac treba odmah raskinuti ugovor sa agencijom. \\
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac prodavac
+    \item Agent
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Potrebna dokumenta\\   
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Potpisan ugovor \\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Nalogodavac prodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca kupca.  \\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Nalogodavac prodavac dolazi u agenciju i \v {c}eka na slobodnog agenta.
+         \item  Slobodan agent poziva nalogodavca prodavca.
+         \item  Nalogodavac prodavac dobija tri primerka ugovora od strane agenta.
+         \item  Potpisuje sva tri primerka i predaje ih agentu.
+         \item  Agent proverava ispravnost sva tri potpisa.
+         \item  Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu prodavcu a dva zadr\v {z}ava u agenciji.
+         \item  Kada agencija na\dj e kupca, nalogodavac prodavac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem prodavcem ne na\dj e kupca za njegovu nekretninu ugovor se automatski raskida. \\
+ \hline
+% Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & /\\
+ \hline
+
+
+\end{longtable}
+\end{center}
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+
+\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupca i agencije bez pla\' canja agencijske provizije}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac zakupac
+    \item Agent
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Potrebna dokumenta\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Potpisan ugovor\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Nalogodavac zakupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslovi} & Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca zakupodavca. \\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Nalogodavac zakupac dolazi u agenciju i \v {c}eka na slobodnog agenta.
+         \item Slobodan agent poziva nalogodavca zakupca. 
+         \item Nalogodavac zakupac dobija tri primerka ugovora od strane agenta.
+         \item Potpisuje sva tri primerka i predaje ih agentu.
+         \item Agent proverava ispravnost sva tri potpisa.
+         \item Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupcu a dva zadr\v {z}ava u agenciji.
+         \item Kada agencija na\dj e zakupodavca, nalogodavac zakupac se obave\v {s}tava o tome. 
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & / \\ 
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & U ugovoru izme\dj u nalogodavca zakupca i agenta ne postoji definisana provizija pa nalogodavac zakupac mo\v {z}e na neki drugi na\v {c}in na\' ci nalogodavca zakupodavca jer u ugovoru nije definisano da je takva radnja zabranjena. Iz tog razloga u ugovoru postoji \v {c}lan koji ka\v {z}e da u takvoj situaciji nalogodavac zakupac treba odmah raskinuti ugovor sa agencijom.\\
+ \hline
+
+\end{longtable}
+\end{center}
+
 
 \subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca kupca i agencije uz pla\' canje agencijske provizije}
-{\bfseries Akteri:} Nalogodavac kupac i agent\\
-{\bfseries Ulaz:} Potrebna dokumenta\\
-{\bfseries Izlaz:} Potpisan ugovor\\
-{\bfseries Preduslovi:} Nalogodavac kupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
-{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca prodavca. \\
-{\bfseries Glavni tok:} Nalogodavac kupac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca kupca. Nalogodavac kupac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu kupcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e prodavca, nalogodavac kupac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom. \\
-{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem kupcem ne na\dj e prodavca za njegovu nekretninu ugovor se automatski raskida. \\
-\subsubsection{\bfseries \Large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupodavca i agencije uz pla\' canje agencijske provizije od strane prodavca}
-{\bfseries Akteri:} Nalogodavac zakupodavac i agent\\
-{\bfseries Ulaz:} Potrebna dokumenta\\
-{\bfseries Izlaz:} Potpisan ugovor\\
-{\bfseries Preduslovi:} Nalogodavac zakupodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
-{\bfseries Postuslov:} Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce traz\v {z}iti nalogodavca zakupca. \\
-{\bfseries Glavni tok:} Nalogodavac zakupodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. Slobodan agent poziva nalogodavca zakupodavca. Nalogodavac zakupodavac dobija tri primerka ugovora od strane agenta. Potpisuje sva tri primerka i predaje ih agentu. Agent proverava ispravnost sva tri potpisa. Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupodavcu a dva zadr\v {z}ava u agenciji. Kada agencija na\dj e zakupca, nalogodavac zakupodavac je du\v {z}an da plati agenciji proviziju od 49\% od prve kirije definisanu ugovorom. \\
-{\bfseries Alternativni tok:} U slu\v {c}aju da agencija u narednih mesec dana od potpisivanja ugovora sa nalogodavcem zakupodavcem ne na\dj e zakupca za njegovu nekretninu ugovor se automatski raskida. \\
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac kupac
+    \item Agent
+\end{itemize}\\
+\hline
 
+ % Ulaz
+ {\it \bfseries Ulaz} & Potrebna dokumenta\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Potpisan ugovor\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Nalogodavac kupac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan. \\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslovi} & Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce tra\v {z}iti nalogodavca prodavca. \\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Nalogodavac kupac dolazi u agenciju i \v {c}eka na slobodnog agenta.
+         \item Slobodan agent poziva nalogodavca kupca. 
+         \item Nalogodavac kupac dobija tri primerka ugovora od strane agenta.
+         \item Potpisuje sva tri primerka i predaje ih agentu. 
+         \item Agent proverava ispravnost sva tri potpisa.
+         \item Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu kupcu a dva zadr\v {z}ava u agenciji.
+         \item Kada agencija na\dj e prodavca, nalogodavac kupac je du\v {z}an da plati agenciji proviziju od 1.9\% definisanu ugovorom.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & / \\ 
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & U slu\v {c}aju da agencija u naredna tri meseca od potpisivanja ugovora sa nalogodavcem kupcem ne na\dj e prodavca za njegovu nekretninu ugovor se automatski raskida. \\
+ \hline
+
+\end{longtable}
+\end{center}
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont
+
+\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupodavca i agencije uz pla\' canje agencijske provizije od strane prodavca}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac zakupodavac
+    \item Agent
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Potrebna dokumenta\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Potpisan ugovor\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Nalogodavac zakupodavac je poneo dokumenta. \v {S}tampa\v {c} u agenciji je ispravan.  \\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslovi} & Agencija ima ta\v {c}ne informacije na osnovu kojih \' ce traz\v {z}iti nalogodavca zakupca. \\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Nalogodavac zakupodavac dolazi u agenciju i \v {c}eka na slobodnog agenta. 
+         \item Slobodan agent poziva nalogodavca zakupodavca. 
+         \item Nalogodavac kupac dobija tri primerka ugovora od strane agenta.
+         \item Potpisuje sva tri primerka i predaje ih agentu. 
+         \item Agent proverava ispravnost sva tri potpisa.
+         \item Potpisuje tako\dj e sva tri primerka, jedan primerak vra\' ca nalogodavcu zakupodavcu a dva zadr\v {z}ava u agenciji. 
+         \item Kada agencija na\dj e zakupca, nalogodavac zakupodavac je du\v {z}an da plati agenciji proviziju od 49\% od prve kirije definisanu ugovorom.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & / \\ 
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & U slu\v {c}aju da agencija u narednih mesec dana od potpisivanja ugovora sa nalogodavcem zakupodavcem ne na\dj e zakupca za njegovu nekretninu ugovor se automatski raskida. \\
+ \hline
+
+\end{longtable}
+\end{center}
 
 
 \newpage
@@ -919,7 +1098,144 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
---Goran
+
+
+\indent Raskid ugovora mo\v {z}e biti ostvaren na dva na\v {c}ina i to od strane advokata kao predstavnika agencije ili od strane
+Nalogodavca prodavca / Nalogodavca zakupodavca / Nalogodavca kupca / Nalogodavca zakupca, u nastavku ovog slu\v {c}aja upotrebe klijenta.
+
+
+\subsubsection{\bfseries \large Use Case: Raskid ugovora od strane agencije}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Klijent
+    \item Advokat
+    \item Administrator sistema
+\end{itemize}\\
+\hline
+
+ {\it \bfseries Ulaz} & Ugovor izme\dju agencije i klijenta\\   
+ \hline
+ 
+ {\it \bfseries Izlaz} & Ugovor o raskidu ugovora \\
+ \hline
+ 
+ {\it \bfseries Preduslovi} & Klijent ima va\v {z}e\' ci ugovor sa agencijom\\
+ \hline
+ 
+ {\it \bfseries Postuslov} & Ugovor je raskinut i baza je a\v {z}urirana \\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Advokat uzima va\v {z}e\' ci primerak ugovora koji je ostao u agenciji kako bi uzeo potrebne podatke.
+         \item  Sklapa ugovor o raskidu ugovora u dva primerka, popunjuje ih prethodno uzetim podacima i potpisuje.
+         \item  Prvi primerak ugovora o raskidu ugovora zadr\v {z}ava u agenciji.
+         \item  Drugi primerak ugovora o raskidu ugovora \v {s}alje po\v {s}tom na adresu klijenta.
+         \item  Obave\v {s}tava administratora. 
+         \item  Administrator a\v {z}urira bazu.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Neuspe\v {s}no dostavljanje ugovora na adresu klijenta. Poku\v {s}ava se opet sa dostavljanjem. \\
+ \hline
+% Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & Advokat \v {s}alje ugovor o raskidanju ugovora preporu\v {c}enom po\v {s}iljkom pa \' ce dobiti povratnu informaciju da li je ugovor dostavljen na adresu klijenta. \\
+ \hline
+
+
+\end{longtable}
+\end{center}
+
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdAgencije} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe raskida ugovora od strane agencije.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.23\textheight]{Pictures/raskidUgovoraOdStraneAgencije}\\
+		\caption{Dijagram aktivnosti: Raskid ugovora od strane agencije}
+		\label{fig:dijagramAktivnostiRaskidUgovoraOdAgencije}
+	\end{figure}
+
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\subsubsection{\bfseries \large Use Case: Raskid ugovora od strane klijenta}
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Klijent
+    \item Advokat
+    \item Administrator sistema
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Ugovor izme\dju agencije i klijenta\\
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Ugovor o raskidu ugovora\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Klijent ima va\v {z}e\' ci ugovor sa agencijom. \\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslovi} & Ugovor je raskinut i baza je a\v {z}urirana.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item Klijent izmiruje sve neizmirene nov\v {c}ane obaveze do kraja ugovora.
+         \item Dolazi u agenciju.
+         \item Advokat prima klijenta u kancelariju.
+         \item Uzima va\v {z}e\' ci ugovor od klijenta.
+         \item Proverava sa administratorom da li su izmirene sve obaveze od strane klijenta predvi\djene ugovorom.
+         \item Sklapa ugovor o raskidu ugovora u dva primerka, popunjava ih potrebnim podacima i potpisuje.
+         \item Daje klijentu oba primerka koji ih tako\dj e potpisuje.
+         \item Klijent zadr\v {z}ava jedan primerak ugovora za sebe, drugi vra\' ca advokatu.
+         \item Advokat obave\v {s}tava administratora. 
+         \item Administrator a\v {z}urira bazu.
+    \end{enumerate}\\
+ \hline
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & U bazi jo\v {s} uvek nije proknji\v {z}ena uplata od strane klijenta za neizmirene obaveze predvi\dj ene ugovorom. Administrator ne mo\v {z}e da potvrdi da su obaveze izmirene. Klijent mo\v {z}e dati advokatu na uvid uplatnice pa se proces nastavlja od koraka $4$. \\ 
+ \hline
+  % Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & /\\
+ \hline
+
+\end{longtable}
+\end{center}
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdKlijenta} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe raskida ugovora od strane klijenta.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/raskidUgovoraOdStraneKlijenta}\\
+		\caption{Dijagram aktivnosti: Raskid ugovora od strane klijenta}
+		\label{fig:dijagramAktivnostiRaskidUgovoraOdKlijenta}
+	\end{figure}
 
 \newpage
 \subsection{\bfseries \Large A\v{z}uriranje pravnih akata}
