@@ -739,12 +739,76 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 	\end{figure}
 
 \newpage
-\subsection{\bfseries \Large Pretra\v{z}ivanje oglasa}
+\subsection{\bfseries \Large Pretra\v {z}ivanje oglasa}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 
--- Goran 
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac kupac / Nalogodavac zakupac
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & /\\   
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Lista oglasa koji ispunjavaju uslove pretrage korisnika \\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Pretraga oglasa radi na ispravan na\v {c}in \\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & / \\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Korisnik odlazi na deo sajta za pretra\v {z}ivanje oglasa.
+         \item  Bira na\v {c}in pretrage izme\dj u brze pretrage pomo\' cu klju\v {c}nih re\v {c}i i uno\v {s}enja parametara.
+         \item  U slu\v {c}aju da izabere pretragu pomo\' cu klju\v {c}nih re\v {c}i unosi klju\v {c}ne re\v {c}i a u slu\v {c}aju da izabere pretragu uno\v {s}enjem parametara unosi parametre.
+         \item  Dodatno, ako je izabrao pretragu uno\v {s}enjem parametara mo\v {z}e \v {c}ekirati opciju Napredna pretraga uno\v {s}enjem parametara nakon \v {c}ega dobija dodatni izbor parametara koje mo\v {z}e izabrati.
+         \item  Potom bira sortiranje kako bi lista oglasa bila u \v {z}eljenom redosledu.
+         \item  Klikom na dugme za pretragu mu izlazi sortirana lista oglasa koja zadovoljava kriterijume pretrage.
+         \item  Pored svakog oglasa iz liste stoji dugme u obliku srca koji ozna\v {c}ava svi\dj anje oglasa od strane korisnika ako klikne na pomenuto dugme.
+         \item  Korisniku se taj oglas pojavljuje u delu pra\' cenih oglasa na svom profilu kako bi mogao direktno da im pristupi.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & U slu\v {c}aju da prilikom klika na srce oglasa koji mu se svi\dj a nije ulogovan, korisniku se na ekranu prikazuje adekvatna poruka nakon \v {c}ega se prebacuje na stranicu sa logovanjem. Kada se korisnik uloguje automatski se vra\' ca na stranicu oglasa koji mu se svi\dj a. \\
+ \hline
+% Dodatne informacije
+ {\it \bfseries Dodatne\newline informacije} & Korisnik prilikom izbora pretrage uno\v {s}enjem parametara nije u obavezi da unese sve parametre. Za parametre koje ne unese podrazumeva se da mu nisu bitni prilikom pretrage. Sortiranje mo\v {z}e biti po datumu oglasa, ceni ili veli\v {c}ini nekretnine po rastu\' cem ili opadaju\' cem redosledu.\\
+ \hline
+
+
+\end{longtable}
+\end{center}
+
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe pretra\v {z}ivanja oglasa.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.95\textwidth,height=0.49\textheight]{Pictures/PretrazivanjeOglasa}\\
+		\caption{Dijagram aktivnosti: Pretra\v {z}ivanje oglasa}
+		\label{fig:dijagramAktivnostiPretrazivanjeOglasa}
+	\end{figure}
+
+
 
 \newpage
 \subsection{\bfseries \Large Gledanje stanova}
@@ -1238,11 +1302,73 @@ Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdKlijenta} je prikazan dijagra
 	\end{figure}
 
 \newpage
-\subsection{\bfseries \Large A\v{z}uriranje pravnih akata}
+\subsection{\bfseries \Large A\v {z}uriranje pravnih akata}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
---Goran
+
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Advokat
+    \item Administrator sistema
+\end{itemize}\\
+\hline
+
+ % Ulaz
+ {\it \bfseries Ulaz} & Postoje\' ci dokument sa pravnim aktima \\   
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & A\v {z}urirani dokument sa pravnim aktima \\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslov} &  Postoji dokument koji treba a\v {z}urirati \\
+ \hline
+ 
+ % Postuslovi
+ {\it \bfseries Postuslov} & Dokument postavljen na web stranici agencije se poklapa sa a\v {z}uriranim dokumentom\\
+ \hline
+
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Advokat skida sa sajta agencije postoje\' ci dokument sa pravnim aktima.
+         \item  A\v {z}urira ga izvr\v {s}avaju\' ci potrebne promene kako bi bio sinhronizovan sa najnovijim izmenama pravnih akata dr\v {z}ave.
+         \item  A\v {z}urirani dokument \v {s}alje administratoru.
+         \item  Administrator bri\v {s}e postoje\' ci dokument sa pravnim aktima koji se nalazi na web stranici agencije.
+         \item  Postavlja a\v {z}urirani dokument sa pravnim aktima.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & Izmenjeni dokument je prilikom slanja administratoru o\v {s}te\' cen. Postavljanje a\v {z}uriranog dokumenta je neuspe\v {s}no. Administrator tra\v {z}i od advokata da mu opet po\v {s}alje dokument. Slu\v {c}aj upotrebe se nastavlja od koraka (3). \\
+ \hline
+
+ {\it \bfseries Dodatne informacije} & Pod a\v {z}uriranjem se podrazumeva brisanje i menjanje odre\dj enih \v {c}lanaka ili dopunjavanje odre\dj enim \v {c}lancima\\
+ \hline
+
+\end{longtable}
+\end{center}
+
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+Na slici \ref{fig:dijagramAktivnostiAzuriranjePravnihAkata} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe a\v {z}uriranja pravnih akata.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.97\textwidth,height=0.43\textheight]{Pictures/AzuriranjePravnihAkata}\\
+		\caption{Dijagram aktivnosti: A\v {z}uriranje pravnih akata}
+		\label{fig:dijagramAktivnostiAzuriranjePravnihAkata}
+	\end{figure}
 
 \newpage
 \subsection{\bfseries \Large Fotografisanje nekretnine}
