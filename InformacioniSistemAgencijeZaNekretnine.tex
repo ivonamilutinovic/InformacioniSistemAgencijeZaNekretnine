@@ -32,9 +32,9 @@
 \HRule \\[1.1cm]
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.25\textwidth,height=0.23\textheight]{Pictures/logo-fakulteta}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.25\textwidth,height=0.23\textheight]{Pictures/logo-fakulteta}
+    \end{figure}
 \vspace{4.2cm}
 
 \begin{minipage}{0.4\textwidth}
@@ -89,37 +89,6 @@ Dr Sa\v sa Malkov\\
 
 \newpage
 \section{\bfseries \Large Analiza sistema}
-\setstretch{1.2}
-\setlength{\parindent}{1cm}
-\fontsize{13}{18} \selectfont 
-
-\subsection{\bfseries \Large Dijagram konteksta celog sistema}
-Na slici \ref{fig:dijagramKontekstaCelogIS} je predstavljen dijagram konteksta celog sistema. Svi procesi sistema su predstavljeni jednim procesom - {\it Agencija za nekretnine}. Sistem interaguje sa entitetima {\it Nalogodavac kupac/zakupac, Nalogodavac prodavac/zakupodavac, Agent, Administator, Advokat}, skladi\v{s}tiem podataka ({\it Baza Podataka}) i modelom baze podataka ({\it Oglasi na web sajtu}).
-
-\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramKontekstaCelogSistema}\\
-		\caption{Dijagram konteksta celog informacionog sistema}
-		\label{fig:dijagramKontekstaCelogIS}
-	\end{figure}
-
-\newpage
-\subsection{\bfseries \Large Dijagram toka podataka}
-\setstretch{1.2}
-\setlength{\parindent}{1cm}
-\fontsize{13}{18} \selectfont 
-
-Na dijagramu toka podataka nivoa 0 glavni proces se deli na cetiri podprocesa - {\it zaključenje ugovora, aktivnost agenta, aktivnost administratora, aktivnost advokata}.
-Dijagramu toka podataka nivoa 1 je predstavljen na slici \ref{fig:dijagramTokaPodatakaIS}. 
-
-\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramTokaPodataka}\\
-		\caption{Dijagram toka podataka informacionog sistema}
-		\label{fig:dijagramTokaPodatakaIS}
-	\end{figure}
-
-\newpage
 \subsection{\bfseries \Large Akteri}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
@@ -144,6 +113,39 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 \indent {\bfseries 4. Profesionalni fotograf} - dolazi zajedno sa agentom pre sklapanja ugovora sa Nalogodavcem prodavcem / zakupodavcem i objavljivanja oglasa kako bi napravio profesionalne fotografije i video zapise nekretnine. 
 
 \newpage
+\subsection{\bfseries \Large Dijagram konteksta
+celog sistema}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+Na slici \ref{fig:dijagramKontekstaCelogIS} je predstavljen dijagram konteksta celog sistema. Svi procesi sistema su predstavljeni jednim procesom - {\it Agencija za nekretnine}. Sistem interaguje sa entitetima {\it Nalogodavac kupac/zakupac, Nalogodavac prodavac/zakupodavac, Agent, Administator, Advokat}, skladi\v{s}tiem podataka ({\it Baza Podataka}) i modelom baze podataka ({\it Oglasi na web sajtu}).
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramKontekstaCelogSistema}\\
+        \caption{Dijagram konteksta celog informacionog sistema}
+        \label{fig:dijagramKontekstaCelogIS}
+    \end{figure}
+
+\newpage
+\subsection{\bfseries \Large Dijagram toka podataka}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+Na dijagramu toka podataka nivoa 0 glavni proces se deli na cetiri podprocesa - {\it zaključenje ugovora, aktivnost agenta, aktivnost administratora, aktivnost advokata}.
+Dijagramu toka podataka nivoa 1 je predstavljen na slici \ref{fig:dijagramTokaPodatakaIS}. 
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.98\textwidth,height=0.5\textheight]{Pictures/DijagramTokaPodataka}\\
+        \caption{Dijagram toka podataka informacionog sistema}
+        \label{fig:dijagramTokaPodatakaIS}
+    \end{figure}
+
+
+\newpage
 \section{\bfseries \Large Slu\v{c}ajevi upotrebe}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
@@ -151,11 +153,11 @@ Jedan klijent mo\v {z}e koristiti usluge agencije istovremeno na oba gorepomenut
 
 Na slici \ref{fig:dijagramSlucajevaUpotrebeCelogIS} prikazan je dijagram slu\v{c}ajeva upotrebe celog informacionog sistema. Prikazani su u\v{c}esnici, slu\v{c}ajevi upotrebe, kao i veze izme{dj}u njih.\\
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramSlucajevaUpotrebeCelogInformacionogSistema}\\
-		\caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
-		\label{fig:dijagramSlucajevaUpotrebeCelogIS}
-	\end{figure}\\
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramSlucajevaUpotrebeCelogInformacionogSistema}\\
+        \caption{Dijagram slu\v{c}ajeva upotrebe celog informacionog sistema}
+        \label{fig:dijagramSlucajevaUpotrebeCelogIS}
+    \end{figure}\\
 U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 
 \newpage
@@ -175,7 +177,7 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 \end{itemize}
 
 \newpage
-\subsubsection{\bfseries \large Use Case: Izmena podataka agencije}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Izmena podataka agencije}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -223,7 +225,7 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 \end{center}
 \newpage
 
-\subsubsection{\bfseries \large Use Case: Dodavanje novog zaposlenog radnika}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Dodavanje novog zaposlenog radnika}
 
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
@@ -281,11 +283,11 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 \end{center}
 Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe dodavanje novog zaposlenog radnika.
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.51\textheight]{Pictures/DodavanjeNovogZaposlenogRadnika.jpg}\\
-		\caption{Dijagram aktivnosti: Dodavanje novog zaposlenog radnika}
-		\label{fig:dijagramAktivnostiDodavanjaZaposlenog}
-	\end{figure}
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.51\textheight]{Pictures/DodavanjeNovogZaposlenogRadnika.jpg}\\
+        \caption{Dijagram aktivnosti: Dodavanje novog zaposlenog radnika}
+        \label{fig:dijagramAktivnostiDodavanjaZaposlenog}
+    \end{figure}
 
 
 \newpage
@@ -294,7 +296,7 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram ak
 \fontsize{13}{18} \selectfont 
 
 
-\subsubsection{\bfseries \large Use Case: Izmena oglasa od strane Nalogodavca zakupodavca}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Izmena oglasa od strane Nalogodavca zakupodavca}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -347,14 +349,14 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram ak
 Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe izmene oglasa od strane Nalogodavca zakupodavca.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.59\textheight]{Pictures/IzmenaOglasaOdStraneKorisnika.jpg}\\
-		\caption{Dijagram aktivnosti: Izmena oglsa od strane Nalogodavca Zakupodavca}
-		\label{fig:dijagramAktivnostiIzmeneOglasa}
-	\end{figure}
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.59\textheight]{Pictures/IzmenaOglasaOdStraneKorisnika.jpg}\\
+        \caption{Dijagram aktivnosti: Izmena oglsa od strane Nalogodavca Zakupodavca}
+        \label{fig:dijagramAktivnostiIzmeneOglasa}
+    \end{figure}
 \newpage
 
-\subsubsection{\bfseries Use Case: Pravljenje rezervne kopije baze}
+\subsubsection{\bfseries Slu\v{c}aj upotrebe: Pravljenje rezervne kopije baze}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -407,11 +409,11 @@ Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnost
 Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe pravljenje rezervne kopije baze.\\
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.59\textheight]{Pictures/PravljenjeRezervneKopije.jpg}\\
-		\caption{Dijagram aktivnosti: Pravljenje rezervne kopije baze}
-		\label{fig:dijagramAktivnostiKopiranjaBaze}
-	\end{figure}
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.59\textheight]{Pictures/PravljenjeRezervneKopije.jpg}\\
+        \caption{Dijagram aktivnosti: Pravljenje rezervne kopije baze}
+        \label{fig:dijagramAktivnostiKopiranjaBaze}
+    \end{figure}
 \newpage
 \subsection{\bfseries \Large Aktivnosti s nalozima}
 \setstretch{1.2}
@@ -421,7 +423,7 @@ Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnos
 \indent Sekcija "Aktivnosti s nalozima" jako usko je povezana sa prethodnom sekcijom "Administracija sistema" s obzirom da glavnu ulogu,u skoro svim slu\v {c}ajevima upotrebe u ove dve sekcija, igra Administrator. Radi podele na logi\v {c}ke celine poslovi administratora se provla\v {c}e kroz nekoliko sekcija slu\v {c}ajeva upotrebe, dok konkretno ova sekcija se bavi samo svim mogu\' cim akcijama koje se mogu sprovesti nad nalogom.\\
 
 
-\subsubsection{\bfseries \large Use Case: Dodavanje novog registrovanog korisnika/Pravljenje naloga}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Dodavanje novog registrovanog korisnika/Pravljenje naloga}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -478,14 +480,14 @@ Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnos
 Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe dodavanje novog registrovanog korisnika.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/DodavanjeNovogRegistrovanogKorisnika.jpg}\\
-		\caption{Dijagram aktivnosti: Dodavanje novog registrovanog korisnika/pravljenje naloga}
-		\label{fig:dijagramAktivnostiDodavanjeKorisnika}
-	\end{figure}
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/DodavanjeNovogRegistrovanogKorisnika.jpg}\\
+        \caption{Dijagram aktivnosti: Dodavanje novog registrovanog korisnika/pravljenje naloga}
+        \label{fig:dijagramAktivnostiDodavanjeKorisnika}
+    \end{figure}
 \newpage
 \newpage
-\subsubsection{\bfseries \large Use Case: Brisanje naloga usled neadekvatnog kori\v {s}\' cenja ili davanja otkaza zaposlenog}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Brisanje naloga usled neadekvatnog kori\v {s}\' cenja ili davanja otkaza zaposlenog}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -540,14 +542,14 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram akt
 Na slici \ref{fig:dijagramAktivnostiBrisanjeAdministrator} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe brisanje naloga usleg neadekvatnog kori\v {s}\' cenja korisnika/ davanja otkaza zaposlenog.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.60\textheight]{Pictures/BrisanjeNalogaUsledNeadekvatnogKoriscenja.jpg}\\
-		\caption{Dijagram aktivnosti: Brisanje naloga od strane administratora}
-		\label{fig:dijagramAktivnostiBrisanjeAdministrator}
-	\end{figure}
-	
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.60\textheight]{Pictures/BrisanjeNalogaUsledNeadekvatnogKoriscenja.jpg}\\
+        \caption{Dijagram aktivnosti: Brisanje naloga od strane administratora}
+        \label{fig:dijagramAktivnostiBrisanjeAdministrator}
+    \end{figure}
+    
 \newpage
-\subsubsection{\bfseries\large Use Case: Brisanje naloga na zahtev korisnika}
+\subsubsection{\bfseries\large Slu\v{c}aj upotrebe: Brisanje naloga na zahtev korisnika}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -600,15 +602,15 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeAdministrator} je prikazan dijagram 
 Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe brisanje naloga na zahtev korisnika
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.57\textheight]{Pictures/BrisanjeNalogaNaZahtevKorisnika.jpg}\\
-		\caption{Dijagram aktivnosti: Brisanje naloga na zahtev korisnika}
-		\label{fig:dijagramAktivnostiBrisanjeKorisnik}
-	\end{figure}
-	
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.57\textheight]{Pictures/BrisanjeNalogaNaZahtevKorisnika.jpg}\\
+        \caption{Dijagram aktivnosti: Brisanje naloga na zahtev korisnika}
+        \label{fig:dijagramAktivnostiBrisanjeKorisnik}
+    \end{figure}
+    
 
 \newpage
-\subsubsection{\bfseries \large Use Case: Izmena informacija naloga registrovanog korisnika}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Izmena informacija naloga registrovanog korisnika}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -663,12 +665,12 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktiv
 Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe izmena informacija naloga registrovanog korisnika
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/IzmenaInformacijaNalogaKorisnika.jpg}\\
-		\caption{Dijagram aktivnosti: Izmena informacija naloga registrovanog korisnika}
-		\label{fig:dijagramAktivnostiIzmenaNaloga}
-	\end{figure}
-	
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/IzmenaInformacijaNalogaKorisnika.jpg}
+        \caption{Dijagram aktivnosti: Izmena informacija naloga registrovanog korisnika}
+        \label{fig:dijagramAktivnostiIzmenaNaloga}
+    \end{figure}
+    
 \newpage
 \subsection{\bfseries \Large Postavljanje oglasa}
 \setstretch{1.2}
@@ -677,6 +679,9 @@ Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnost
 
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Kratak opis
+ \hline
+ {\it \bfseries Kratak opis} & Slu\v{c}aj upotrebe opisuje postupak postavljanja oglasa za prodaju ili izdavanje nekretnine od strane Nalogodavca prodavca ili Nalogodavca zakupodavca na internet stranicu agencije.
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -712,14 +717,14 @@ Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnost
          \item  Nalogodavac prodavac, odnosno Nalogodavac zakupodavac popunjava online formular za dodavanje svoje nekretnine ili se javlja agenciji preko e-mail-a, odnosno kontakt telefona. 
          \item  Nalogodavac priprema dokumenta koji potvr{\dj}uju da je nekretnina njegovo vlasni\v{s}tvo i da su svi tro\v{s}ovi regulisani 
          \item Nalogodavac priprema stan za fotografisanje. 
-         \item  Agent pose\'{c}uje Nalogodavca kako bi procenio vrednost stana u odnosu na trenutno stanje na tr\v{z}i\v{s}tu,  preuzeo dokumentaciju koju predaje advokatu na uvid.
+         \item  Agent pose\'{c}uje Nalogodavca kako bi procenio vrednost nekretnine u odnosu na trenutno stanje na tr\v{z}i\v{s}tu,  preuzeo dokumentaciju koju predaje advokatu na uvid.
          \item Profesionalni fotograf bele\v{z}i fotografije, 360{\textdegree} fotografije i video zapise nekretnine. 
-         \item  Nakon toga, u roku od 24h se postavlja internet prezentacija oglasa.
+         \item  Nakon toga, u roku od 24h Administrator postavlja internet prezentaciju oglasa.
     \end{enumerate}\\
  \hline
 
  % Alternativni tok
- {\it \bfseries Alternativni tok} & Dokumenta nisu ispravna\\
+ {\it \bfseries Alternativni tok} & Dokumenta nisu ispravna.U ovom slu\v{c}aju se obustavlja saradnja sa Nalogodavcem za nekretninu u vezi koje se obratio agenciji. Slu\v{c}aj upotrebe se zavr\v{s}ava.\\
  \hline
 
 \end{longtable}
@@ -732,11 +737,11 @@ Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnost
 Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe postavljanja oglasa.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramAktivnosti-PostavljanjeOglasa}\\
-		\caption{Dijagram aktivnosti: Postavljanje oglasa}
-		\label{fig:dijagramAktivnostiPostavljanjeOglasa}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramAktivnosti-PostavljanjeOglasa}\\
+        \caption{Dijagram aktivnosti: Postavljanje oglasa}
+        \label{fig:dijagramAktivnostiPostavljanjeOglasa}
+    \end{figure}
 
 \newpage
 \subsection{\bfseries \Large Pretra\v {z}ivanje oglasa}
@@ -804,11 +809,11 @@ Na slici \ref{fig:dijagramAktivnostiPostavljanjeOglasa} je prikazan dijagram akt
 Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe pretra\v {z}ivanja oglasa.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.95\textwidth,height=0.49\textheight]{Pictures/PretrazivanjeOglasa}\\
-		\caption{Dijagram aktivnosti: Pretra\v {z}ivanje oglasa}
-		\label{fig:dijagramAktivnostiPretrazivanjeOglasa}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth,height=0.49\textheight]{Pictures/PretrazivanjeOglasa}\\
+        \caption{Dijagram aktivnosti: Pretra\v {z}ivanje oglasa}
+        \label{fig:dijagramAktivnostiPretrazivanjeOglasa}
+    \end{figure}
 
 
 
@@ -817,7 +822,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
-\subsubsection{\bfseries \large Use Case: Online zakazivanje gledanja}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Online zakazivanje gledanja}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -867,17 +872,17 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \end{center}
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.35\textheight] {Pictures/DijagramAktivnostiOnlineZakazivanjeGledanja.png}\\
-		\caption{Dijagram aktivnosti: Online zakazivanje gledanja nekretnina}
-		\label{fig:dijagramAktivnostiOnlineZakazivanjeGledanja}
-	\end{figure}
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.35\textheight] {Pictures/DijagramAktivnostiOnlineZakazivanjeGledanja.png}\\
+        \caption{Dijagram aktivnosti: Online zakazivanje gledanja nekretnina}
+        \label{fig:dijagramAktivnostiOnlineZakazivanjeGledanja}
+    \end{figure}
 
 \newpage
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
-\subsubsection{\bfseries \large Use Case: Obilazak nekretnine}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Obilazak nekretnine}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -910,28 +915,28 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
          \item  Nalogodavac kupac / nalogodavac zakupac potvrdjuje svoj dolazak
          \item  Nalogodavac kupac / nalogodavac zakupac dolazi na adresu gde se nekretnina nalazi, gde se sastaje sa agentom.
          \item Agent obilazi nekretninu sa kupcem / zakupcem.
-         \item Nalogodavac kupac / nalogodavac zakupac odlu\v cuje da kupi / zakupi nekretninu. Prelazi se na use case "Zaklju\v civanje ugovora".
+         \item Nalogodavac kupac / nalogodavac zakupac odlu\v cuje da kupi / zakupi nekretninu. Prelazi se na Slu\v{c}aj upotrebe "Zaklju\v civanje ugovora".
     \end{enumerate}\\
  \hline
 \end{tabular}
 \end{center}
 
  % Alternativni tok
-\textbf{\textit{Alternativni tokovi}}: Ako je kupac / zakupac u medjuvremenu otkazao gledanje nekretnine, agent mo\v ze da se posveti drugim klijentima koji su zakazani za taj dan. Ako se kupac / zakupac ne javlja na mobilni telefon, agent ne dolazi na predvidjenu adresu, i kupac / zakupac je prinudjen da sam izvr\v si obilazak. Ako kupac / zakupac ne dodje u zakazanom terminom, najpre mu se \v salje mejl ili se on kontaktira telefonom. Ukoliko je bio opravdano spre\v cen, nudi mu se drugi termin, u suprotnom se smatra da zloupotrebljava svoj nalog i prelazi se na use case "Brisanje naloga". Ako kupac / zakupac ne \v zeli da kupi / zakupi nekretninu, ponavlja se \v citav postupak za druge nekretnine koje su na njegovom spisku u sistemu.  \\
+\textbf{\textit{Alternativni tokovi}}: Ako je kupac / zakupac u medjuvremenu otkazao gledanje nekretnine, agent mo\v ze da se posveti drugim klijentima koji su zakazani za taj dan. Ako se kupac / zakupac ne javlja na mobilni telefon, agent ne dolazi na predvidjenu adresu, i kupac / zakupac je prinudjen da sam izvr\v si obilazak. Ako kupac / zakupac ne dodje u zakazanom terminom, najpre mu se \v salje mejl ili se on kontaktira telefonom. Ukoliko je bio opravdano spre\v cen, nudi mu se drugi termin, u suprotnom se smatra da zloupotrebljava svoj nalog i prelazi se na Slu\v{c}aj upotrebe "Brisanje naloga". Ako kupac / zakupac ne \v zeli da kupi / zakupi nekretninu, ponavlja se \v citav postupak za druge nekretnine koje su na njegovom spisku u sistemu.  \\
  
 \newpage
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramAktivnostiObilazakNekretnine.png}\\
-		\caption{Dijagram aktivnosti: Obilazak nekretnine}
-		\label{fig:dijagramAktivnostiObilazakNekretnine}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/DijagramAktivnostiObilazakNekretnine.png}\\
+        \caption{Dijagram aktivnosti: Obilazak nekretnine}
+        \label{fig:dijagramAktivnostiObilazakNekretnine}
+    \end{figure}
 \newpage
 \subsection{\bfseries \Large Provera ispravnosti dokumenata}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
-\subsubsection{\bfseries \large Use Case: Provera uknji\v zenosti nekretnine}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Provera uknji\v zenosti nekretnine}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -970,7 +975,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
         \item Advokat provera da li je nekretnina uknji\v zena u zemlji\v sne knjige ili u katastru nepokretnosti.
         \item Advokat registruje da je nekretnina uknji\v zena 
         \item Advokat proverava da li nekretnina ima tereta 
-        \item Advokat registruje da nekretnina nema tereta i prelazi se na use case "Provera vlasni\v stva"
+        \item Advokat registruje da nekretnina nema tereta i prelazi se na Slu\v{c}aj upotrebe "Provera vlasni\v stva"
     \end{enumerate}\\
  \hline
 
@@ -981,13 +986,13 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \textbf{\textit{Alternativni tokovi}}: Ako nekretnina nije uknji\v zena i ako je nekretnina ste\v cena na osnovu zakona (a ovde \' ce to agencija omogu\' citi), teret dokazivanja pravnog sleda nije na kupcu, i on se registruje kao novi vlasnik. U tom smislu, u ovom slu\v caju prodavac ne mora ni\v sta da radi i postupak se nastavlja od ta\v cke 4. Ako nekretnina ima tereta, advokat obave\v stava prodavca / zakupca da namiri svoje poreske obaveze. Ako prodavac / zakupac namiri svoje obaveze, prelazi se na ta\v cku 5. Ako prodavac / zakupac ne namiri svoje obaveze, postupak se prekida, smatra se da prodavac / zakupac zloupotrebljava svoj nalog i nalog se uklanja. \\
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.9\textwidth,height=0.6\textheight]{Pictures/DijagramAktivnostiProveraUknjizenosti.png}\\
-		\caption{Dijagram aktivnosti: Provera uknjizenosti nekretnine}
-		\label{fig:dijagramAktivnostiProveraUknjizenosti}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.6\textheight]{Pictures/DijagramAktivnostiProveraUknjizenosti.png}\\
+        \caption{Dijagram aktivnosti: Provera uknjizenosti nekretnine}
+        \label{fig:dijagramAktivnostiProveraUknjizenosti}
+    \end{figure}
 \newpage
-\subsubsection{\bfseries \large Use Case: Provera vlasni\v stva}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Provera vlasni\v stva}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -1024,7 +1029,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
      \begin{enumerate}
         \item Nalogodavac prodavac / nalogodavac zakupodavac je jedini vlasnik nekretnine i nema bra\v cnog druga
         \item Advokat registruje da je sve u redu sa vlasni\v stvom
-        i prelazi se na use case "Zaklju\v cenje ugovora"
+        i prelazi se na Slu\v{c}aj upotrebe "Zaklju\v cenje ugovora"
     \end{enumerate}\\
  \hline
 % Alternativni tok
@@ -1043,7 +1048,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 
 
 \indent U ranijem delu smo naveli da postoje \v {c}etiri razli\v {c}ita aktera koji mogu tra\v {z}iti usluge agencije pa samim tim postoje i \v {c}etiri razli\v {c}ita ugovora koje agencija mo\v {z}e sklopiti sa svojim klijentima. \\ 
-\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca prodavca i agencije uz pla\' canje agencijske provizije}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Zaklju\v {c}enje ugovora izme\dj u nalogodavca prodavca i agencije uz pla\' canje agencijske provizije}
 
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
@@ -1103,7 +1108,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \fontsize{13}{18} \selectfont 
 
 
-\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupca i agencije bez pla\' canja agencijske provizije}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupca i agencije bez pla\' canja agencijske provizije}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -1155,7 +1160,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \end{center}
 
 
-\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca kupca i agencije uz pla\' canje agencijske provizije}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Zaklju\v {c}enje ugovora izme\dj u nalogodavca kupca i agencije uz pla\' canje agencijske provizije}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -1210,7 +1215,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont
 
-\subsubsection{\bfseries \large Use Case: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupodavca i agencije uz pla\' canje agencijske provizije od strane prodavca}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Zaklju\v {c}enje ugovora izme\dj u nalogodavca zakupodavca i agencije uz pla\' canje agencijske provizije od strane prodavca}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -1272,7 +1277,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 Nalogodavca prodavca / Nalogodavca zakupodavca / Nalogodavca kupca / Nalogodavca zakupca, u nastavku ovog slu\v {c}aja upotrebe klijenta.
 
 
-\subsubsection{\bfseries \large Use Case: Raskid ugovora od strane agencije}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Raskid ugovora od strane agencije}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
 
@@ -1328,16 +1333,16 @@ Nalogodavca prodavca / Nalogodavca zakupodavca / Nalogodavca kupca / Nalogodavca
 Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdAgencije} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe raskida ugovora od strane agencije.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.6\textwidth,height=0.23\textheight]{Pictures/raskidUgovoraOdStraneAgencije}\\
-		\caption{Dijagram aktivnosti: Raskid ugovora od strane agencije}
-		\label{fig:dijagramAktivnostiRaskidUgovoraOdAgencije}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth,height=0.23\textheight]{Pictures/raskidUgovoraOdStraneAgencije}\\
+        \caption{Dijagram aktivnosti: Raskid ugovora od strane agencije}
+        \label{fig:dijagramAktivnostiRaskidUgovoraOdAgencije}
+    \end{figure}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 
-\subsubsection{\bfseries \large Use Case: Raskid ugovora od strane klijenta}
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Raskid ugovora od strane klijenta}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
@@ -1398,11 +1403,11 @@ Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdAgencije} je prikazan dijagra
 Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdKlijenta} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe raskida ugovora od strane klijenta.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/raskidUgovoraOdStraneKlijenta}\\
-		\caption{Dijagram aktivnosti: Raskid ugovora od strane klijenta}
-		\label{fig:dijagramAktivnostiRaskidUgovoraOdKlijenta}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/raskidUgovoraOdStraneKlijenta}\\
+        \caption{Dijagram aktivnosti: Raskid ugovora od strane klijenta}
+        \label{fig:dijagramAktivnostiRaskidUgovoraOdKlijenta}
+    \end{figure}
 
 \newpage
 \subsection{\bfseries \Large A\v {z}uriranje pravnih akata}
@@ -1467,11 +1472,11 @@ Na slici \ref{fig:dijagramAktivnostiRaskidUgovoraOdKlijenta} je prikazan dijagra
 Na slici \ref{fig:dijagramAktivnostiAzuriranjePravnihAkata} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe a\v {z}uriranja pravnih akata.
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=0.97\textwidth,height=0.43\textheight]{Pictures/AzuriranjePravnihAkata}\\
-		\caption{Dijagram aktivnosti: A\v {z}uriranje pravnih akata}
-		\label{fig:dijagramAktivnostiAzuriranjePravnihAkata}
-	\end{figure}
+        \centering
+        \includegraphics[width=0.97\textwidth,height=0.43\textheight]{Pictures/AzuriranjePravnihAkata}\\
+        \caption{Dijagram aktivnosti: A\v {z}uriranje pravnih akata}
+        \label{fig:dijagramAktivnostiAzuriranjePravnihAkata}
+    \end{figure}
 
 \newpage
 \subsection{\bfseries \Large Fotografisanje nekretnine}
@@ -1481,9 +1486,12 @@ Na slici \ref{fig:dijagramAktivnostiAzuriranjePravnihAkata} je prikazan dijagram
 
 
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
- % Akteri
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Kratak opis
  \hline
+ {\it \bfseries Kratak opis} & Slu\v{c}aj upotrebe opisuje izvr\v{s}avanje zadu\v{z}enja fotografa u cilju sakupljanja materijala za postavljanje oglasa za nekretninu.
+ % Akteri
+\hline
  {\it \bfseries Akteri} & \begin{itemize}
     \item Profesionalni fotograf
     %\item Administrator
@@ -1523,30 +1531,87 @@ Na slici \ref{fig:dijagramAktivnostiAzuriranjePravnihAkata} je prikazan dijagram
 
  % Alternativni tok
  {\it \bfseries Alternativni tok } & \begin{itemize}
-    \item Nikog nije bilo na navedenoj adresi
-    \item Materijali su se o\v{s}tetili
+    \item Nikog nije bilo na navedenoj adresi. Slu\v caj upotrebe nastavlja na koraku 1 glavnog toka u narednom terminu dogovorenom od strane Nalogodavca i fotografa.
+    \item Materijali su se o\v{s}tetili. Slu\v caj upotrebe nastavlja na koraku 1 glavnog toka u narednom terminu dogovorenom od strane Nalogodavca i fotografa. 
  \end{itemize}\\
  \hline
  % Dodatne informacije
  {\it \bfseries Dodatne\newline informacije} & Svaka prostorija mora imati barem jednu fotografiju i barem jednu 360{\textdegree}     fotografiju. Fotografije treba da prezentuju aktuelno stanje nekretnine.\\
  \hline
 
-\end{tabular}
+\end{longtable}
 \end{center}
+
 \newpage
 \newpage
-\section{\bfseries \Large Baza podataka} 
+\section{\bfseries \Large Shema baze podataka} 
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 
 \begin{figure}[h]
-		\centering
-		\includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/AgencijaZaNekretnine.png}\\
-		\caption{EER dijagram}
-		\label{fig:dijagramAktivnostiProveraUknjizenosti}
-	\end{figure}
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/AgencijaZaNekretnine.png}\\
+        \caption{EER dijagram}
+        \label{fig:EERbaza}
+    \end{figure}
 
+\newpage
+\section{\bfseries \Large Predlog izgleda korisni\v{c}kog interfejsa} 
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+\subsection{\bfseries \Large Predlog izgleda po\v cetne stranice}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+Na slici \ref{fig:pocetna} je prikazan predlog izgleda inicijalne stranice agencije za nekretninu. Na inicijalnoj stranici korisnik ima mogu\v cnost da se registruje, odnosno prijavi, da ponudi svoju nekretninu, pretra\v zuje oglase uno\v senjem klju\v cnih re\v ci ili biranjem parametara (izdavanje / prodaja, op\v stina / naselje, cena, kvadratura) koji odgovaraju njegovoj potra\v znji. Tako{\dj}e, kosisnik ima mogu\' cnost da odabere jezik na kome \'{c}e se stranica prikazivati i da pro\v cita dodatne informacije o agenciji kao \v sto su pravila poslovanja, cenovnik, itd. 
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.54\textheight]{Prototip-slike/pocetna.png}\\
+        \caption{Izgled po\v cetne stranice}
+        \label{fig:pocetna}
+    \end{figure}
+
+\newpage
+\subsection{\bfseries \Large Predlog izgleda stranice za registraciju}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+-- Jelena Markovic
+
+\newpage
+\subsection{\bfseries \Large Predlog izgleda stranice zahteva za postavljanje oglasa}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+Na slici \ref{fig:pocetna} je prikazan predlog izgleda stranice sa formom za postavljanje oglasa.
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.64\textheight]{Prototip-slike/postavljanjeOglasa.png}\\
+        \caption{Izgled stranice za postavljanje oglasa}
+        \label{fig:postavljanjeOglasa}
+    \end{figure}
+
+\newpage
+\subsection{\bfseries \Large Predlog izgleda stranice za pretr\v{z}ivanje oglasa}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+-- Jelena Markovic
+Nakon uno\v senja parametara za prijavu, korisnik ima mogu\' cnost napredne pretrage uno\v senjem dodatnih parametara.
+
+\newpage
+\section{\bfseries \Large Predlog arhitekture sistema} 
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+-- Goran 
 
 
 \end{document}
