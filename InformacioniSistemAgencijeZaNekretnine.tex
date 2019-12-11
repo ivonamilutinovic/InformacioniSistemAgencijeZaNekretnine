@@ -896,7 +896,9 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
  % Ulaz
  {\it \bfseries Ulaz i Izlaz} & Nema\\   
  \hline
- 
+ % Ulaz
+ %{\it \bfseries Kratak opis} & Nalogodavac kupac / nalogodavac %zakupac obilazi nekretninu sa agentom ili sam i odlu\v cuje da li %\' ce da je kupi / zakupi. \\   
+ \hline
  % Preduslovi
  {\it \bfseries Preduslovi} & Nalogodavac prodavac / nalogodavac zakupodavac je obave\v sten o terminu gledanja nekretnine.\\
  \hline
@@ -916,13 +918,19 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
          \item  Nalogodavac kupac / nalogodavac zakupac dolazi na adresu gde se nekretnina nalazi, gde se sastaje sa agentom.
          \item Agent obilazi nekretninu sa kupcem / zakupcem.
          \item Nalogodavac kupac / nalogodavac zakupac odlu\v cuje da kupi / zakupi nekretninu. Prelazi se na Slu\v{c}aj upotrebe "Zaklju\v civanje ugovora".
-    \end{enumerate}\\
- \hline
+    \end{enumerate}\\ 
+\hline
 \end{tabular}
-\end{center}
-
+\end{center} 
  % Alternativni tok
-\textbf{\textit{Alternativni tokovi}}: Ako je kupac / zakupac u medjuvremenu otkazao gledanje nekretnine, agent mo\v ze da se posveti drugim klijentima koji su zakazani za taj dan. Ako se kupac / zakupac ne javlja na mobilni telefon, agent ne dolazi na predvidjenu adresu, i kupac / zakupac je prinudjen da sam izvr\v si obilazak. Ako kupac / zakupac ne dodje u zakazanom terminom, najpre mu se \v salje mejl ili se on kontaktira telefonom. Ukoliko je bio opravdano spre\v cen, nudi mu se drugi termin, u suprotnom se smatra da zloupotrebljava svoj nalog i prelazi se na Slu\v{c}aj upotrebe "Brisanje naloga". Ako kupac / zakupac ne \v zeli da kupi / zakupi nekretninu, ponavlja se \v citav postupak za druge nekretnine koje su na njegovom spisku u sistemu.  \\
+\textbf{\textit{Alternativni tokovi}}: 
+\begin{itemize}
+    \item Alternativni tok 1: Nastaje nakon prvog koraka glavnog toka.  Ako je kupac / zakupac u medjuvremenu otkazao gledanje nekretnine, agent mo\v ze da se posveti drugim klijentima koji su zakazani za taj dan. Slu\v caj upotrebe se zavr\v sava.
+    \item Alternativni tok 2: Nastaje u tre\' cem koraku glavnog toka. Ako se kupac / zakupac ne javlja na mobilni telefon, agent ne dolazi na predvidjenu adresu, i kupac / zakupac je prinudjen da sam izvr\v si obilazak. Slu\v caj upotrebe se nastavlja u poslednjem koraku glavnog toka.
+    \item Alternativni tok 3:  Nastaje u \v cetvrtom koraku glavnog toka. Ako kupac / zakupac ne dodje u zakazanom terminom, najpre mu se \v salje mejl ili se on kontaktira telefonom. Ukoliko je bio opravdano spre\v cen, nudi mu se drugi termin i prelazi se na isti slu\v caj upotrebe "Obilazak nekretnine". Ovaj alternativni tok ima svoj alternativni tok. Ako kupac / zakupac nije bio opravdano spre\v cen da dodje, smatra se da zloupotrebljava svoj nalog i prelazi se na slu\v caj upotrebe "Brisanje naloga". 
+    \item Alternativni tok 4: Nastaje u \v sestom koraku glavnog toka. Ako kupac / zakupac ne \v zeli da kupi / zakupi nekretninu, ponavlja se \v citav postupak (slu\v caj upotrebe "Obilazak nekretnine") za druge nekretnine koje su na njegovom spisku u sistemu.  
+\end{itemize}
+
  
 \newpage
 \begin{figure}[h]
@@ -1630,7 +1638,7 @@ Karakteristike arhitekture sistema agencije za nekretnine:
             \item Pomo\' {c}: Uputstvo za kori\v {s}\' {c}enje veb aplikacije, kontakt forma, FAQ
             \item Backup baze podataka: Podsistem koji automatski ili na zahtev pravi kopiju baze podataka
          \end{enumerate}
-\end{enumerate}\\
+\end{enumerate}
 
 \subsection{\bfseries \Large Tip i slojevi arhitekture}
 \setstretch{1.2}
@@ -1644,9 +1652,9 @@ Karakteristike arhitekture sistema agencije za nekretnine:
     \begin{itemize}
         \item Klijent kontroler 
         \item Server kontroler
-    \end{itemize}\\
+    \end{itemize}
     \item Sloj podataka
-\end{itemize}\\
+\end{itemize}
  
  
 \subsubsection{\bfseries \Large Komponente klijenta }
@@ -1656,7 +1664,7 @@ Karakteristike arhitekture sistema agencije za nekretnine:
 \begin{itemize}
     \item \textbf{Prezentacioni sloj:} Predstavlja najvi\v {s}i sloj aplikacije i ima ulogu da korisniku prika\v {z}e vizuelnu reprezentaciju sadr\v {z}aja na osnovu podataka koje dobija od ni\v {z}eg sloja. Sastoji se od skupa html stranica koje su izgra\dj ene uz pomo\' c HTML, CSS, JS, PHP a njihov detaljan prikaz je dat u sekciji Predlog izgleda korisni\v {c}kog interfejsa. Po\v {c}etna stranica je index.html na kojoj korisnik unosi parametre na osnovu kojih se vr\v {s}i pretraga. U slu\v {c}aju da je ulogovan ima prikaz svojih podataka u vidu imena i prezimena i opciju da se izloguje. U suprotnom ima opciju da se uloguje klikom na dugme Prijava nakon \v {c}ega popunjava podatke u pop-up prozoru koji mu se pojavio. Na sli\v {c}an na\v {c}in sa po\v {c}etne stranice index.html klikom na dugme Registracija se mo\v {z}e registrovati. Nakon \v {s}to se uloguje klikom na polje sa svojim imenom i prezimenom na stranici index.html prelazi na stranicu mojprofil.html gde mo\v {z}e vr\v {s}iti izmenu svojih podataka ili brisanje profila. U oba slu\v {c}aja se nakon potvrde za izmenom pojavljuje adekvatna poruka o uspe\v {s}nom izvr\v {s}enju. Stranica ponuda.html nudi korisniku opciju da objavi svoju nekretninu. 
     \item \textbf{Klijent kontroler:} Vr\v {s}i se validacija une\v {s}enih parametara u vidu korisni\v {c}kog imena i lozinke od strane korisnika a potom i autentikacija/autorizacija kako bi korisnik video samo one stranice koje ima pravo da vidi na osnovu svojih prava pristupa. Klijent kontroler tako\dj e \v obra\dj uje podatke koje je dobio od servera i prosle\dj uje ih prezentacionom sloju. Prilikom pretrage \v {c}uva parametre koje treba proslediti na obradu serveru.
-\end{itemize}\\
+\end{itemize}
       
             
 \subsubsection{\bfseries \Large Komponente servera }
@@ -1666,7 +1674,7 @@ Karakteristike arhitekture sistema agencije za nekretnine:
 \begin{itemize}
     \item \textbf{Server kontroler:} Prva komponenta arhitekture kojoj korisnici nemaju pristup \v {s}to omogu\' cava da se na detaljniji na\v {c}in izvr\v {s}i autentikacija/autorizacija i verifikacija. Ovde se vr\v {s}e sva izra\v {c}unavanja nad podacima uzetim iz baze.
     \item \textbf{Logi\v {c}ki sloj:} Sadr\v {z}i bazu podataka i mehanizme koji na bezbedan na\v {c}in omogu\' cavaju server kontroleru da pristupi bazi podataka.
-\end{itemize}\\
+\end{itemize}
 
 \newpage
 \begin{figure}[h]
