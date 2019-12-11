@@ -666,7 +666,7 @@ Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnost
 
 \begin{figure}[h]
         \centering
-        \includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/IzmenaInformacijaNalogaKorisnika.jpg}
+        \includegraphics[width=1.1\textwidth,height=0.74\textheight]{Pictures/IzmenaInformacijaNalogaKorisnika.jpg}\\
         \caption{Dijagram aktivnosti: Izmena informacija naloga registrovanog korisnika}
         \label{fig:dijagramAktivnostiIzmenaNaloga}
     \end{figure}
@@ -1607,11 +1607,74 @@ Na slici \ref{fig:pocetna} je prikazan predlog izgleda stranice sa formom za pos
 Nakon uno\v senja parametara za prijavu, korisnik ima mogu\' cnost napredne pretrage uno\v senjem dodatnih parametara.
 
 \newpage
-\section{\bfseries \Large Predlog arhitekture sistema} 
+\section{\bfseries \Large Arhitektura sistema} 
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
--- Goran 
 
+\subsection{\bfseries \Large Karakteristike sistema}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
 
+\indent Prilikom razmatranja arhitekture informacionog sistema cilj je bio napraviti jednostavnu, \v {s}iroko dostupnu, stabilnu i bezbednu aplikaciju. Izborom veb aplikacije obezbedili smo \v {s}iroku dostupnost jer je za njeno kori\v {s}\' {c}enje potrebno samo da korisnik ima internet vezu na svom ra\v {c}unaru. Pa\v {z}ljivo vode\' {c}i ra\v {c}una prilikom izrade korisni\v {c}kog interfejsa je postignuta jednostavnost a stabilnost i pre svega bezbednost izborom troslojne arhitekture gde se sredi\v {s}nji (logi\v {c}ki) sloj deli na klijentski i serverski deo. 
+
+Karakteristike arhitekture sistema agencije za nekretnine:
+\begin{enumerate}
+         \item  Tip aplikacije: Veb aplikacija
+         \item  Strategije isporu\v {c}ivanja: Jedan serverski i vi\v {s}e klijentskih ra\v {c}unara
+         \item  Tehnologije: HTML, CSS, JS, PHP
+         \item  Prate\' {c}e komponente:
+         \begin{enumerate}
+            \item Logovanje na sistem: Podsistem za autentikaciju korisnika
+            \item Pomo\' {c}: Uputstvo za kori\v {s}\' {c}enje veb aplikacije, kontakt forma, FAQ
+            \item Backup baze podataka: Podsistem koji automatski ili na zahtev pravi kopiju baze podataka
+         \end{enumerate}
+\end{enumerate}\\
+
+\subsection{\bfseries \Large Tip i slojevi arhitekture}
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+
+ Arhitektura informacionog sistema je zami\v {s}ljena kao klijent - server arhitektura i sastoji se iz tri sloja pri \v {c}emu se sredi\v {s}nji sloj deli na dve komponente: 
+ \begin{itemize}
+    \item Prezentacioni sloj
+    \item Logi\v {c}ki sloj
+    \begin{itemize}
+        \item Klijent kontroler 
+        \item Server kontroler
+    \end{itemize}\\
+    \item Sloj podataka
+\end{itemize}\\
+ 
+ 
+\subsubsection{\bfseries \Large Komponente klijenta }
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+\begin{itemize}
+    \item \textbf{Prezentacioni sloj:} Predstavlja najvi\v {s}i sloj aplikacije i ima ulogu da korisniku prika\v {z}e vizuelnu reprezentaciju sadr\v {z}aja na osnovu podataka koje dobija od ni\v {z}eg sloja. Sastoji se od skupa html stranica koje su izgra\dj ene uz pomo\' c HTML, CSS, JS, PHP a njihov detaljan prikaz je dat u sekciji Predlog izgleda korisni\v {c}kog interfejsa. Po\v {c}etna stranica je index.html na kojoj korisnik unosi parametre na osnovu kojih se vr\v {s}i pretraga. U slu\v {c}aju da je ulogovan ima prikaz svojih podataka u vidu imena i prezimena i opciju da se izloguje. U suprotnom ima opciju da se uloguje klikom na dugme Prijava nakon \v {c}ega popunjava podatke u pop-up prozoru koji mu se pojavio. Na sli\v {c}an na\v {c}in sa po\v {c}etne stranice index.html klikom na dugme Registracija se mo\v {z}e registrovati. Nakon \v {s}to se uloguje klikom na polje sa svojim imenom i prezimenom na stranici index.html prelazi na stranicu mojprofil.html gde mo\v {z}e vr\v {s}iti izmenu svojih podataka ili brisanje profila. U oba slu\v {c}aja se nakon potvrde za izmenom pojavljuje adekvatna poruka o uspe\v {s}nom izvr\v {s}enju. Stranica ponuda.html nudi korisniku opciju da objavi svoju nekretninu. 
+    \item \textbf{Klijent kontroler:} Vr\v {s}i se validacija une\v {s}enih parametara u vidu korisni\v {c}kog imena i lozinke od strane korisnika a potom i autentikacija/autorizacija kako bi korisnik video samo one stranice koje ima pravo da vidi na osnovu svojih prava pristupa. Klijent kontroler tako\dj e \v obra\dj uje podatke koje je dobio od servera i prosle\dj uje ih prezentacionom sloju. Prilikom pretrage \v {c}uva parametre koje treba proslediti na obradu serveru.
+\end{itemize}\\
+      
+            
+\subsubsection{\bfseries \Large Komponente servera }
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont       
+\begin{itemize}
+    \item \textbf{Server kontroler:} Prva komponenta arhitekture kojoj korisnici nemaju pristup \v {s}to omogu\' cava da se na detaljniji na\v {c}in izvr\v {s}i autentikacija/autorizacija i verifikacija. Ovde se vr\v {s}e sva izra\v {c}unavanja nad podacima uzetim iz baze.
+    \item \textbf{Logi\v {c}ki sloj:} Sadr\v {z}i bazu podataka i mehanizme koji na bezbedan na\v {c}in omogu\' cavaju server kontroleru da pristupi bazi podataka.
+\end{itemize}\\
+
+\newpage
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/Arhitektura3.png}\\
+        \caption{Arhitektura sistema}
+        \label{fig:arhitekturaSistema}
+\end{figure}
+
+      
 \end{document}
