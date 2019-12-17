@@ -180,6 +180,11 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Izmena podataka agencije}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+
+% Opis
+ {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje izmenu podataka agencije. Administrator unosi izmene o ageniciji i \v {c}uva ih u sistemu.\\ 
+
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -229,6 +234,11 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
 
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+
+% Opis
+ {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje dodavanje novog zaposlenog u sistem, nakon njegovog zapo\v {s}ljavanja u agenciji. Dodavanje novog zaposlenog u sistem vr\v {s}i administrator sistema.\\ 
+ 
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -274,13 +284,14 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
  % Alternativni tok
 % \hline
  {\it \bfseries Alternativni tok} & 1. Administrator je uo\v {c}io nepravilnost u prikupljenim podacima. Administrator kontaktira zaposlenog kako bi dobio ispravne podatke. Slu\v {c}aj upotrebe se nastavlja od ta\v {c}ke (1).\\
- & 2. Zaposleni nije dobio mejl za pristupanje svom nalogu. Administrator zahteva od sistema da ponovo po\v {s}alje mejl. Slu\v {c}aj upotrebe se nastavlja od slanja mejla novozaposlenom od strane sistema.\\
+ & 2. Zaposleni nije dobio mejl za pristupanje svom nalogu. Administrator zahteva od sistema da ponovo po\v {s}alje mejl. Slu\v {c}aj upotrebe se nastavlja od slanja mejla novozaposlenom od strane sistema (6).\\
  \hline
   % Dodatne informacije
  {\it \bfseries Dodatne infor.} & Podaci koji su neophodni za registraciju novog korisnika su korisni\v {c}ko ime, ime, prezime, mail, telefon, jmbg.\\
  \hline
 \end{longtable}
 \end{center}
+\newpage
 Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe dodavanje novog zaposlenog radnika.
 \begin{figure}[h]
         \centering
@@ -299,6 +310,9 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram ak
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Izmena oglasa od strane Nalogodavca zakupodavca}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+% Opis
+ {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje izmenu oglasa od strane nalogodavca zakupodavca. Naime nalogodavac zakupodavac odlazi na svoj oglas i menja \v {z}eljene podatke, nakon \v {c}ega su izmene sa\v {c}uvane u sistemu.\\ 
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -328,8 +342,8 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram ak
      {\it \bfseries Glavni tok} &  
      \begin{enumerate}
          \item Nalogodavac zakupodavac odlazi na svoj oglas.
-         \item Pritiska dugme "Izmeni oglas"
-         \item Menja \v {z}eljene podatke
+         \item Nalogodavac zakupodavac pritiska dugme "Izmeni oglas"
+         \item Nalogodavac zakupodavac menja \v {z}eljene podatke
          \item Administrator sistema proverava ispravnost podataka.
          \item Sistem \v {c}uva unete podatke.
          \item Sistem obave\v {s}tava korisnika o uspe\v {s}nom menjanju oglasa
@@ -345,31 +359,30 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjaZaposlenog} je prikazan dijagram ak
 
 \end{longtable}
 \end{center}
-
+\newpage
 Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnosti za slu\v{c}aj upotrebe izmene oglasa od strane Nalogodavca zakupodavca.
-
 \begin{figure}[h]
         \centering
         \includegraphics[width=1.1\textwidth,height=0.59\textheight]{Pictures/IzmenaOglasaOdStraneKorisnika.jpg}\\
         \caption{Dijagram aktivnosti: Izmena oglsa od strane Nalogodavca Zakupodavca}
         \label{fig:dijagramAktivnostiIzmeneOglasa}
     \end{figure}
-\newpage
 
 \subsubsection{\bfseries Slu\v{c}aj upotrebe: Pravljenje rezervne kopije baze}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+% Opis
+ {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje pravljenje rezervne kopije baze, kako se u slu\v {c}aju pada sistema ne bi izgubili podaci sa\v {c}uvani u bazi. Pravljenje rezervne kopije baze vr\v {s}i administrator sistema.\\ 
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
     \item Administrator sistema
 \end{itemize}\\
 \hline
-
  % Ulaz
  {\it \bfseries Ulaz} & Nema\\
  \hline
- 
  % Izlaz
  {\it \bfseries Izlaz} & Nema\\
  \hline
@@ -387,8 +400,8 @@ Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnost
      {\it \bfseries Glavni tok} &  
      \begin{enumerate}
          \item Administrator proverava da li ima nekih velikih obrada nad bazom u datom trenutku.
-         \item Ukoliko nema pokre\' ce pravljenje rezervne kopije.
-         \item Upisuje vreme kada je rezervna kopija napravljena.
+         \item Administrator ukoliko nema pokre\' ce pravljenje rezervne kopije.
+         \item Administrator upisuje vreme kada je rezervna kopija napravljena.
          \item Sistem \v {c}uva unete podatke.
          \item Sistem obave\v {s}tava administratora o uspe\v {s}nom pravljenju rezervne kopije baze.
     \end{enumerate}\\
@@ -399,7 +412,7 @@ Na slici \ref{fig:dijagramAktivnostiIzmeneOglasa} je prikazan dijagram aktivnost
   % Dodatne informacije
  {\it \bfseries Dodatne\newline informacije} & /\\
  \hline
-\end{tabular}
+\end{longtable}
 \end{center}
 \newpage
 
@@ -426,6 +439,9 @@ Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnos
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Dodavanje novog registrovanog korisnika/Pravljenje naloga}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+% Opis
+ {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje dodavanje novog registrovanog korisnika. Naime novi korisnik pristupa veb stranici i pravi svoj nalog nakon \v {c}ega administrator prihvata zahtev za registrovanje i nalog je sa\v {c}uvan u sistemu.\\ 
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -456,7 +472,7 @@ Na slici \ref{fig:dijagramAktivnostiKopiranjaBaze} je prikazan dijagram aktivnos
      \begin{enumerate}
          \item Korisnik pritiska dugme "Registruj se" na sajtu.
          \item Korisnik popunjava zahtev za registraciju na sajtu agencije za nekretnine, unose\' ci neophodne li\v {c}ne podatke.
-         \item \v {S}alje zahtev za registraciju.
+         \item Korisnik \v {s}alje zahtev za registraciju.
          \item Administrator prima zahtev za registrovanje novog korisnika.
          \item Administrator proverava da li je zahtev validan (da li je prijava pravilno popunjena i da li je korisnik uneo validne podatke - email adresa, ime, prezime, adresa ...)
          \item Administrator prihvata zahtev za registrovanje i potvr\dj uje unos.
@@ -502,7 +518,10 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram akt
 \newpage
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Brisanje naloga usled neadekvatnog kori\v {s}\' cenja ili davanja otkaza zaposlenog}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+% Opis
+ {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje brisanje naloga usled neadekvatnog kori\v {s}\'cenja ili davanja otkaza zaposlenog. Naime administrator sistema bri\v {s}e naloge zaposlenih nakon davanja ili dobivanja otkaza, kao i naloga korisnika usled neadekvatne upotrebe istog.\\ 
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -544,11 +563,9 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram akt
  {\it \bfseries Dodatne infor.} & /\\
  \hline
 
-\end{tabular}
+\end{longtable}
 \end{center}
 
-
-\newpage
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
@@ -565,6 +582,9 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeAdministrator} je prikazan dijagram 
 \subsubsection{\bfseries\large Slu\v{c}aj upotrebe: Brisanje naloga na zahtev korisnika}
 \begin{center}
 \begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+% Opis
+ {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje brisanje naloga na zahtev korisnika. Naime u slu\v {c}aju da korisnik ne \v {z}eli vi\v {s}e da poseduje nalog na sajtu za nekretnine, korisnik bira opciju "Obri\v {s}i nalog" nakon \v {c}ega je nalog obrisan iz sistema.\\ 
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -641,6 +661,9 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktiv
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Izmena informacija naloga registrovanog korisnika}
 \begin{center}
 \begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+\hline
+% Opis
+ {\it \bfseries Kratak opis} &Slu\v {c}aj upotrebe opisuje izmenu informacija naloga registrovanog korisnika. Naime korisnik menja li\v {c}ne podatke i nakon provere od strane administratora sistema, izmenjeni podaci se \v {c}uvaju u sistemu.\\
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -686,7 +709,7 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktiv
 
 \end{longtable}
 \end{center}
-
+\newpage
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
