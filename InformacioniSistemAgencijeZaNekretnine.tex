@@ -169,14 +169,14 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
     \item skladi\v {s}ti i odr\v {z}ava bazu podataka nekretnina koje agencija ima u ponudi,
     \item omogu\' cava registraciju korisnika, izmenu podataka korisnika na nalogu stranice, kao i brisanje naloga,
     \item omogu\' cava korisnicima pretragu nekretnina kao i zakazivanje gledanja nekretnina,
-    \item vodi evidenciju o zaposlenim agentima u agenciji, /* vodi evidenciju o zaposlenima */
+    \item vodi evidenciju o zaposlenima
     \item pravi redovne backup-ove baze podataka.
 \end{itemize}
 
 \newpage
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Izmena podataka agencije}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
 \hline
 
 % Opis
@@ -223,7 +223,7 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
  {\it \bfseries Dodatne\newline informacije} & Podaci koji se menjaju u ovom slu\v {c}aju su: ime agencije, \v {s}ifra, registarski broj agencije, logo ...\\
  \hline
 
-\end{tabular}
+\end{longtable}
 \end{center}
 \newpage
 
@@ -272,12 +272,12 @@ U nastavku \'{c}e svaki od slu\v{c}ajeva upotrebe biti posebno obra{dj}en.
          \item Sistem obave\v {s}tava administratora o uspe\v {s}nom dodavanju novog zaposlenog.
     \end{enumerate}\\
  \hline
-% \end{tabular}
+% \end{longtable}
 %\end{center}
 %\newpage
 
 %\begin{center}
-%\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+%\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Alternativni tok
 % \hline
  {\it \bfseries Alternativni tok} & 1. Administrator je uo\v {c}io nepravilnost u prikupljenim podacima. Administrator kontaktira zaposlenog kako bi dobio ispravne podatke. Slu\v {c}aj upotrebe se nastavlja od ta\v {c}ke (1).\\
@@ -502,14 +502,14 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram akt
 
 \begin{figure}[h]
         \centering
-        \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/Registracija.png}\\
+        \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/3-ekranRegistruj.png}\\
         \caption{Predlog korisni\v ckog interfejsa: Deo za registraciju novog korisnika}
    \end{figure}
 \newpage
 \begin{figure}[h]
         \centering
-        \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/potvrdaRegistracije.png}\\
-        \caption{Predlog korisni\v ckog interfejsa: Deo za potvrdu registracije}
+        \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/4-ekranPotRegistracije.png}\\
+        \caption{Predlog izgleda korisni\v ckog interfejsa: Potvrda registracije}
     \end{figure}
 
 \newpage
@@ -578,7 +578,7 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeAdministrator} je prikazan dijagram 
 \newpage
 \subsubsection{\bfseries\large Slu\v{c}aj upotrebe: Brisanje naloga na zahtev korisnika}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
 \hline
 % Opis
  {\it \bfseries Kratak opis} & Slu\v {c}aj upotrebe opisuje brisanje naloga na zahtev korisnika. Naime u slu\v {c}aju da korisnik ne \v {z}eli vi\v {s}e da poseduje nalog na sajtu za nekretnine, korisnik bira opciju "Obri\v {s}i nalog" nakon \v {c}ega je nalog obrisan iz sistema.\\ 
@@ -623,7 +623,7 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeAdministrator} je prikazan dijagram 
  \hline
 
 
-\end{tabular}
+\end{longtable}
 \end{center}
 \newpage
 \setstretch{1.2}
@@ -895,7 +895,7 @@ Na slici \ref{fig:dijagramAktivnostiPretrazivanjeOglasa} je prikazan dijagram ak
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
-Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne stranice grafi\v ckog korisni\v ckog interfejsa. Na po\v cetnoj stranici korisnik ima mogu\' cnost pretrage pomo\' cu klju\v cnih re\v ci kao i pretrage zadavanjem parametara. Ukoliko se korisnik odlu\v ci za pratragu zadavanjem parametara, pored liste oglasa koji zadovoljavaju unete parametre, na istoj stranici \' ce mu biti ponu\dj ena i mogu\' cnost napredne pretrage. Predlog izgleda grafi\v ckog korisni\v ckog interfejsa u slu\v caju pretrage zadavanjem parametara je prikazan na slici \ref{fig:guiPretrazivanjeOglasaRez}. 
+Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne stranice grafi\v ckog korisni\v ckog interfejsa. Na po\v cetnoj stranici korisnik ima mogu\' cnost pretrage pomo\' cu klju\v cnih re\v ci kao i pretrage zadavanjem parametara. Ukoliko se korisnik odlu\v ci za pratragu zadavanjem parametara, pored liste oglasa koji zadovoljavaju unete parametre, na istoj stranici \' ce mu biti ponu\dj ena i mogu\' cnost napredne pretrage. Predlog izgleda grafi\v ckog korisni\v ckog interfejsa sa rezultatima pretrage prikazan je na slici \ref{fig:guiPretrazivanjeOglasaRez}. Korisnik mo\v e dodati oglas u omiljene klikom na simbol srca.
 
 \begin{figure}[h]
         \centering
@@ -907,7 +907,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
 \newpage
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.9\textwidth,height=0.35\textheight]{FP_Slike/2-PretrazivanjeOglasa.png}\\
+        \includegraphics[width=0.9\textwidth,height=0.35\textheight]{FP_Slike/9-PretrazivanjeOglasa.png}\\
         \caption{Predlog izgleda grafi\v ckog korisni\v ckog interfejsa: Pretra\v zivanje oglasa - rezultati}
         \label{fig:guiPretrazivanjeOglasaRez}
     \end{figure}
@@ -920,7 +920,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
 \fontsize{13}{18} \selectfont 
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Online zakazivanje gledanja}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -964,7 +964,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
  {\it \bfseries Alternativni tok} & U koraku 3, kupac / zakupac mo\v ze da odustane od zakazanog termina. U tom slu\v caju treba nastaviti od koraka $5$.\\
  \hline
  
-\end{tabular}
+\end{longtable}
 \end{center}
 
 \begin{figure}[h]
@@ -974,13 +974,22 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
         \label{fig:dijagramAktivnostiOnlineZakazivanjeGledanja}
     \end{figure}
 
+Na slici \ref{fig:guiZakaziGledanje} je prikazan predlog izgleda grafi\v ckog korisni\v ckog interfejsa kada koristik klikne na dugme "Zaka\v zi gledanje" na stranici sa rezultatima pretrage. Korisnik ima mogu\' cnost da odabere termin gledanja nekretnine kao i agenta koji \' ce mu biti na raspolaganju tokom saradnje sa agencijom.
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.35\textheight]{FP_Slike/10-zakaziGledanje.png}\\
+        \caption{Predlog izgleda grafi\v ckog korisni\v ckog interfejsa: Pretra\v zivanje oglasa - rezultati}
+        \label{fig:guiZakaziGledanje}
+    \end{figure}
+
 \newpage
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Obilazak nekretnine}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -1016,7 +1025,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
          \item Nalogodavac kupac / nalogodavac zakupac odlu\v cuje da kupi / zakupi nekretninu. Prelazi se na Slu\v{c}aj upotrebe "Zaklju\v civanje ugovora".
     \end{enumerate}\\ 
 \hline
-\end{tabular}
+\end{longtable}
 \end{center} 
  % Alternativni tok
 \textbf{\textit{Alternativni tokovi}}: 
@@ -1025,6 +1034,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
     \item Alternativni tok 2: Nastaje u tre\' cem koraku glavnog toka. Ako se kupac / zakupac ne javlja na mobilni telefon, agent ne dolazi na predvidjenu adresu, i kupac / zakupac je prinudjen da sam izvr\v si obilazak. Slu\v caj upotrebe se nastavlja u poslednjem koraku glavnog toka.
     \item Alternativni tok 3:  Nastaje u \v cetvrtom koraku glavnog toka. Ako kupac / zakupac ne dodje u zakazanom terminom, najpre mu se \v salje mejl ili se on kontaktira telefonom. Ukoliko je bio opravdano spre\v cen, nudi mu se drugi termin i prelazi se na isti slu\v caj upotrebe "Obilazak nekretnine". Ovaj alternativni tok ima svoj alternativni tok. Ako kupac / zakupac nije bio opravdano spre\v cen da dodje, smatra se da zloupotrebljava svoj nalog i prelazi se na slu\v caj upotrebe "Brisanje naloga". 
     \item Alternativni tok 4: Nastaje u \v sestom koraku glavnog toka. Ako kupac / zakupac ne \v zeli da kupi / zakupi nekretninu, ponavlja se \v citav postupak (slu\v caj upotrebe "Obilazak nekretnine") za druge nekretnine koje su na njegovom spisku u sistemu.  
+\hline
 \end{itemize}
 
  
@@ -1036,13 +1046,86 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
         \label{fig:dijagramAktivnostiObilazakNekretnine}
     \end{figure}
 \newpage
+
+\newpage
+\setstretch{1.2}
+\setlength{\parindent}{1cm}
+\fontsize{13}{18} \selectfont 
+\subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Ocena agenta nakon gledanja nekretnine}
+
+Napomena: u slede\' coj tabeli se pod klijentom smatraju kako Nalogodavci prodavci i zakupodavci, tako i Nalogodavci kupci i zakupci.
+\begin{center}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
+ % Akteri
+ \hline
+ {\it \bfseries Akteri} & \begin{itemize}
+    \item Nalogodavac kupac / nalogodavac zakupac
+    \item Nalogodavac prodavac / nalogodavac zakupodavac
+    \item Agent
+\end{itemize}\\
+\hline
+
+% Opis
+ {\it \bfseries Kratak opis} & Klijenti ocenjuju i komentari\v{s}u uslogu agenta preko svog profila na web stanici agencije\\ 
+ \hline
+ 
+ % Ulaz
+ {\it \bfseries Ulaz} & /\\ 
+ \hline
+ 
+ % Izlaz
+ {\it \bfseries Izlaz} & Ocena i komentar klijenta\\
+ \hline
+ 
+ % Preduslovi
+ {\it \bfseries Preduslovi} & Klijent je pogledao nekretninu zajedno sa agnetom u slu\v caju Nalogodavca kupca i Nalogodavca zakupca. Odnosno, klijentova nekretnina je pogledana od strane potencijalnih kupaca, odnosno zakupaca u slucaju Nalogodavca prodavca i Nalogodavca zakupca.\\
+ \hline
+
+ % Postuslovi
+ {\it \bfseries Postuslov} & Ocena i komentar o agentu koje je klijent uneo su sa\v cuvani u sistemu.\\
+ \hline
+
+ % Glavni tok
+     %\multicolumn{2}{c}
+     {\it \bfseries Glavni tok} &  
+     \begin{enumerate}
+         \item  Klijent se loguje na svoj nalog.
+         \item  Klijent ocenjuje agenta ocenom od 1 do 5.
+         \item  Klijent unosi komentar o agnetu.
+         \item  Klijent pritiska dugme za unos svoje ocene.
+    \end{enumerate}\\
+ \hline
+
+ % Alternativni tok
+ {\it \bfseries Alternativni tok} & /\\
+ \hline
+\end{longtable}
+\end{center}
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=1.1\textwidth,height=0.35\textheight] {FP_Slike/6-ekranPrijavljen.png}\\
+        \caption{Dijagram aktivnosti: Ocena agenta nakon gledanja nekretnine}
+        \label{fig:guiOcenaAgenta}
+    \end{figure}
+\newpage
+
+
+
+
+
+
+
+
+
+
 \subsection{\bfseries \Large Provera ispravnosti dokumenata}
 \setstretch{1.2}
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Provera uknji\v zenosti nekretnine}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -1083,7 +1166,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
     \end{enumerate}\\
  \hline
 
-\end{tabular}
+\end{longtable}
 \end{center}
 
  % Alternativni tok
@@ -1098,7 +1181,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
 \newpage
 \subsubsection{\bfseries \large Slu\v{c}aj upotrebe: Provera vlasni\v stva}
 \begin{center}
-\begin{tabular}{p{0.23\linewidth} p{0.77\linewidth}}
+\begin{longtable}{p{0.23\linewidth} p{0.77\linewidth}}
  % Akteri
  \hline
  {\it \bfseries Akteri} & \begin{itemize}
@@ -1139,7 +1222,7 @@ Na slici \ref{fig:guiPretrazivanjeOglasa} je prikazan predlog izgleda po\v cetne
 % Alternativni tok
  {\it \bfseries Alternativni tok} & U slu\v caju da prodavac / zakupodavac ima bra\v cnog druga, on dostavlja potpisanu izjavu o saglasnosti bra\v cnog druga sa prodajom / izdavanjem nekretnine advokatu. Ako jo\v s neko ima pravo na nekretninu, radi se o do\v zivotnom izdr\v zavanju ili o ugovoru o poklonu. Ako je u pitanju ugovor o poklonu, potrebno je tra\v ziti i saglasnost drugog deteta ili naslednika ako ga ima. Ako je u pitanju do\v zivotno izdr\v zavanje treba pogledati i imovinsku raspravu. \\
  \hline
-\end{tabular}
+\end{longtable}
 \end{center}
 
 
