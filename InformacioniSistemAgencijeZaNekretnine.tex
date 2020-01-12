@@ -503,7 +503,7 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram akt
 \begin{figure}[h]
         \centering
         \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/3-ekranRegistruj.png}\\
-        \caption{Predlog korisni\v ckog interfejsa: Deo za registraciju novog korisnika}
+        \caption{Predlog izgleda korisni\v ckog interfejsa: Registracija novog korisnika}
    \end{figure}
 \newpage
 \begin{figure}[h]
@@ -643,7 +643,7 @@ Na slici \ref{fig:dijagramAktivnostiBrisanjeKorisnik} je prikazan dijagram aktiv
 \begin{figure}[h]
         \centering
         \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/izmenaPodataka.png}\\
-        \caption{Predlog korisni\v ckog interfejsa: Korisnik ulazi na svoj profil i bira brisanje naloga}
+        \caption{Predlog izgleda korisni\v ckog interfejsa: Brisanje naloga od strane korisnika}
     \end{figure}
     
 \newpage
@@ -722,13 +722,13 @@ Na slici \ref{fig:dijagramAktivnostiIzmenaNaloga} je prikazan dijagram aktivnost
 \begin{figure}[h]
         \centering
         \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/izmenaPodataka.png}\\
-        \caption{Predlog korisni\v ckog interfejsa: Korisnik ulazi u sekciju sa svojim li\v cnim podacima}
+        \caption{Predlog izgleda korisni\v ckog interfejsa: Sekcija sa li\v cnim podacima korisnika}
     \end{figure}
 \newpage
 \begin{figure}[h]
         \centering
         \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/potvrdaIzmena.png}\\
-        \caption{Predlog korisni\v ckog interfejsa: Sistem obavestava korisnika da su izmene u nalogu uspe\v sno obavljene}
+        \caption{Predlog korisni\v ckog interfejsa: Obavestenje korisnika o uspesno sa\v cuvanim izmenama o nalogu}
     \end{figure}
 \newpage
 \subsection{\bfseries \Large Postavljanje oglasa}
@@ -979,7 +979,7 @@ Na slici \ref{fig:guiZakaziGledanje} je prikazan predlog izgleda grafi\v ckog ko
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.9\textwidth,height=0.35\textheight]{FP_Slike/10-zakaziGledanje.png}\\
-        \caption{Predlog izgleda grafi\v ckog korisni\v ckog interfejsa: Pretra\v zivanje oglasa - rezultati}
+        \caption{Predlog izgleda grafi\v ckog korisni\v ckog interfejsa: Zakazivanje gledanja}
         \label{fig:guiZakaziGledanje}
     \end{figure}
 
@@ -1918,8 +1918,8 @@ Karakteristike arhitekture sistema agencije za nekretnine:
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont 
 \begin{itemize}
-    \item \textbf{Prezentacioni sloj:} Predstavlja najvi\v {s}i sloj aplikacije i ima ulogu da korisniku prika\v {z}e vizuelnu reprezentaciju sadr\v {z}aja na osnovu podataka koje dobija od ni\v {z}eg sloja. Sastoji se od skupa html stranica koje su izgra\dj ene uz pomo\' c HTML, CSS, JS, PHP a njihov detaljan prikaz je dat u sekciji Predlog izgleda korisni\v {c}kog interfejsa. Po\v {c}etna stranica je index.html na kojoj korisnik unosi parametre na osnovu kojih se vr\v {s}i pretraga. U slu\v {c}aju da je ulogovan ima prikaz svojih podataka u vidu imena i prezimena i opciju da se izloguje. U suprotnom ima opciju da se uloguje klikom na dugme Prijava nakon \v {c}ega popunjava podatke u pop-up prozoru koji mu se pojavio. Na sli\v {c}an na\v {c}in sa po\v {c}etne stranice index.html klikom na dugme Registracija se mo\v {z}e registrovati. Nakon \v {s}to se uloguje klikom na polje sa svojim imenom i prezimenom na stranici index.html prelazi na stranicu mojprofil.html gde mo\v {z}e vr\v {s}iti izmenu svojih podataka ili brisanje profila. U oba slu\v {c}aja se nakon potvrde za izmenom pojavljuje adekvatna poruka o uspe\v {s}nom izvr\v {s}enju. Stranica ponuda.html nudi korisniku opciju da objavi svoju nekretninu. 
-    \item \textbf{Klijent kontroler:} Vr\v {s}i se validacija une\v {s}enih parametara u vidu korisni\v {c}kog imena i lozinke od strane korisnika a potom i autentikacija/autorizacija kako bi korisnik video samo one stranice koje ima pravo da vidi na osnovu svojih prava pristupa. Klijent kontroler tako\dj e \v obra\dj uje podatke koje je dobio od servera i prosle\dj uje ih prezentacionom sloju. Prilikom pretrage \v {c}uva parametre koje treba proslediti na obradu serveru.
+    \item \textbf{Prezentacioni sloj:} Predstavlja najvi\v {s}i sloj aplikacije i ima ulogu da korisniku prika\v {z}e vizuelnu reprezentaciju sadr\v {z}aja na osnovu podataka koje dobija od ni\v {z}eg sloja. Sastoji se od skupa html stranica koje su izgra\dj ene uz pomo\' c HTML, CSS, JS, PHP a njihov detaljan izgled je dat ispod slu\v {c}ajeva upotrebe u kojima se koriste. Po\v {c}etna stranica je index.html na kojoj korisnik vr\v {s}i pretragu uno\v {s}enjem parametara i biranjem izme\dj u ponu\dj enih parametara. Na istoj stranici prilikom pretra\v {z}ivanja mo\v {z}e otvoriti i popuniti detaljnu pretragu kako bi rezultati bili precizniji. Kada unese \v {z}eljene parametre klikom na dugme u obliku strelice mu se otvara stranica pretraga.html sa rezultatima pretrage. Stranica pretraga.html se prikazuje i u slu\v {c}aju da je korisnik sa po\v {c}etne stranice izabrao opciju brze pretrage uno\v {s}enjem klju\v {c}nih re\v {c}i. Jedan oglas iz liste rezultata pretrage se sastoji iz slike nekretnine, naslova oglasa, cene i dugmeta u obliku srca koje u slu\v {c}aju da ulogovani korisnik klikne ozna\v {c}ava da mu se dati oglas svi\dj a i u nastavku ga mo\v {z}e pogledati na stranici profil.html klikom na dugme Prika\v {z}i moje omiljene oglase. Iz liste omiljenih oglasa direktno a iz liste rezultata pretrage otvaranjem konkretnog oglasa klikom na dugme Zaka\v {z}i gledanje ulogovanom korisniku se otvara stranica termin.html gde mo\v {z}e izabrati datum, vreme i agenta i zakazati gledanje nekretnine. Korisnik ima opciju da se uloguje klikom na dugme Prijava nakon \v {c}ega mu se otvara stranica login.html u kojoj popunjava podatke u vidu imena i lozinke ili kori\v {s}\' {c}enjem svog Facebook profila. Na sli\v {c}an na\v {c}in sa po\v {c}etne stranice index.html klikom na dugme Registracija se mo\v {z}e registrovati, ta\v {c}nije otvara mu se stranica signup.html koju popunjava svojim podacima i nakon \v {s}to popuni \v {s}alje na proveru. Ako je sve u redu izlazi mu poruka sa obave\v {s}tenjem da mu je na mejl adresu upisanu prilikom registracije poslat kod i ispod toga polje gde taj kod treba uneti. Nakon \v {s}to unese taj kod korisniku se pojavljuje pop-up prozor na kome se nalazi poruka da je nalog uspe\v {s}no kreiran i ispod poruke uputstvo za kori\v {s}\' {c}enje sajta koje mo\v {z}e skinuti. Ulogovan korisnik na po\v {c}etnoj stranici index.html vidi polje sa svojim imenom i prezimenom i opciju da se izloguje. Klikom na polje sa svojim imenom i prezimenom sa stranice index.html prelazi na stranicu mojprofil.html gde mo\v {z}e vr\v {s}iti izmenu svojih podataka ili brisanje profila. Brisanje profila izvr\v {s}ava klikom na dugme Obri\v {s}i nalog nakon \v {c}ega mu se pojavljuje pop-up prozor sa porukom o uspe\v {s}nom brisanju profila. Izmenu podataka vr\v {s}i tako \v {s}to ranije unesene podatke menja novim podacima nakon \v {c}ega ih potvr\dj uje klikom na dugme Zapamti izmene. Sa po\v {c}etne stranice index.html klikom na dugme Ponudite nekretninu korisniku se otvara stranica ponuda.html gde popunjava tra\v {z}ene podatke koje \v {s}alje klikom na dugme Po\v {s}alji upit nakon \v {c}ega mu se pojavljuje pop-up prozor sa porukom o uspe\v {s}nom slanju upita i kontaktiranju od strane agencije u najkra\' {c}em mogu\' {c}em roku. Klijent nakon kori\v {s}\' {c}enja usluga agenta ima mogu\' {c}nost da za istog unese ocenu i komentar na stranici profil.html i po\v {s}alje klikom na dugme Unesi ocenu. 
+    \item \textbf{Klijent kontroler:} Vr\v {s}i se validacija unetih parametara u vidu korisni\v {c}kog imena i lozinke od strane korisnika. Klijent kontroler tako\dj e obra\dj uje podatke koje je dobio od servera i prosle\dj uje ih prezentacionom sloju. Prilikom pretrage \v {c}uva parametre koje treba proslediti na obradu serveru.
 \end{itemize}
       
             
@@ -1928,18 +1928,17 @@ Karakteristike arhitekture sistema agencije za nekretnine:
 \setlength{\parindent}{1cm}
 \fontsize{13}{18} \selectfont       
 \begin{itemize}
-    \item \textbf{Server kontroler:} Prva komponenta arhitekture kojoj korisnici nemaju pristup \v {s}to omogu\' cava da se na detaljniji na\v {c}in izvr\v {s}i autentikacija/autorizacija i verifikacija. Ovde se vr\v {s}e sva izra\v {c}unavanja nad podacima uzetim iz baze.
-    \item \textbf{Logi\v {c}ki sloj:} Sadr\v {z}i bazu podataka i mehanizme koji na bezbedan na\v {c}in omogu\' cavaju server kontroleru da pristupi bazi podataka.
+    \item \textbf{Server kontroler:} Prva komponenta arhitekture kojoj korisnici nemaju pristup \v {s}to omogu\' cava da se izvr\v {s}i autentikacija/autorizacija kako bi korisnik video samo one stranice koje ima pravo da vidi na osnovu svog identiteta i svojih prava pristupa. Server kontroler izvr\v {s}ava i verifikaciju. Tako\v {dj}e ovde se vr\v {s}e sva izra\v {c}unavanja nad podacima uzetim iz baze.
+    \item \textbf{Sloj podataka:} Sadr\v {z}i bazu podataka i mehanizme koji na bezbedan na\v {c}in omogu\' cavaju server kontroleru da pristupi bazi podataka.
 \end{itemize}
 
 \newpage
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/Arhitektura3.png}\\
+        \includegraphics[width=0.9\textwidth,height=0.74\textheight]{Pictures/Arhitektura3.jpg}\\
         \caption{Arhitektura sistema}
         \label{fig:arhitekturaSistema}
 \end{figure}
-
       
 \end{document}
 
