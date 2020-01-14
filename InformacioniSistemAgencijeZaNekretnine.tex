@@ -508,7 +508,7 @@ Na slici \ref{fig:dijagramAktivnostiDodavanjeKorisnika} je prikazan dijagram akt
 \newpage
 \begin{figure}[h]
         \centering
-        \includegraphics[width=1.2\textwidth,height=0.5\textheight]{FP_Slike/4-ekranPotRegistracije.png}\\
+        \includegraphics[width=0.9\textwidth,height=0.5\textheight]{FP_Slike/4-ekranPotRegistracije.png}\\
         \caption{Predlog izgleda korisni\v ckog interfejsa: Potvrda registracije}
     \end{figure}
 
@@ -1159,7 +1159,11 @@ Na slici \ref{fig:guiZakaziGledanje} je prikazan predlog izgleda grafi\v ckog ko
 
 
  % Alternativni tok
-\textbf{\textit{Alternativni tokovi}} & Ako nekretnina nije uknji\v zena i ako je nekretnina ste\v cena na osnovu zakona (a ovde \' ce to agencija omogu\' citi), teret dokazivanja pravnog sleda nije na kupcu, i on se registruje kao novi vlasnik. U tom smislu, u ovom slu\v caju prodavac ne mora ni\v sta da radi i postupak se nastavlja od ta\v cke 4. Ako nekretnina ima tereta, advokat obave\v stava prodavca / zakupca da namiri svoje poreske obaveze. Ako prodavac / zakupac namiri svoje obaveze, prelazi se na ta\v cku 5. Ako prodavac / zakupac ne namiri svoje obaveze, postupak se prekida, smatra se da prodavac / zakupac zloupotrebljava svoj nalog i nalog se uklanja. \\
+\textbf{\textit{Alternativni tokovi}} & 
+\begin{itemize}
+\item Alternativni tok 1: Ako nekretnina nije uknji\v zena i ako je nekretnina ste\v cena na osnovu zakona (a ovde \' ce to agencija omogu\' citi), teret dokazivanja pravnog sleda nije na kupcu, i on se registruje kao novi vlasnik. U tom smislu, u ovom slu\v caju prodavac ne mora ni\v sta da radi i postupak se nastavlja od ta\v cke 4. 
+\item Alternativni tok 2: Nastaje ako nekretnina ima tereta. Advokat obave\v stava prodavca / zakupca da namiri svoje poreske obaveze. Ako prodavac / zakupac namiri svoje obaveze, prelazi se na ta\v cku 5. Ako prodavac / zakupac ne namiri svoje obaveze, postupak se prekida, smatra se da prodavac / zakupac zloupotrebljava svoj nalog i nalog se uklanja. 
+\end{itemize}
 \hline
 \end{longtable}
 \end{center}
@@ -1212,7 +1216,12 @@ Na slici \ref{fig:guiZakaziGledanje} je prikazan predlog izgleda grafi\v ckog ko
     \end{enumerate}\\
  \hline
 % Alternativni tok
- {\it \bfseries Alternativni tok} & U slu\v caju da prodavac / zakupodavac ima bra\v cnog druga, on dostavlja potpisanu izjavu o saglasnosti bra\v cnog druga sa prodajom / izdavanjem nekretnine advokatu. Ako jo\v s neko ima pravo na nekretninu, radi se o do\v zivotnom izdr\v zavanju ili o ugovoru o poklonu. Ako je u pitanju ugovor o poklonu, potrebno je tra\v ziti i saglasnost drugog deteta ili naslednika ako ga ima. Ako je u pitanju do\v zivotno izdr\v zavanje treba pogledati i imovinsku raspravu. \\
+ {\it \bfseries Alternativni tok} & 
+ \begin{itemize}
+     \item Alternativni tok 1: U slu\v caju da prodavac / zakupodavac ima bra\v cnog druga, on dostavlja potpisanu izjavu o saglasnosti bra\v cnog druga sa prodajom / izdavanjem nekretnine advokatu. Ako ne dostavi potrebnu saglasnost, slu\v caj upotrebe se zavr\v sava.
+     \item Alternativni tok 2: Ako jo\v s neko ima pravo na nekretninu, radi se o do\v zivotnom izdr\v zavanju ili o ugovoru o poklonu. Ako je u pitanju ugovor o poklonu, potrebno je tra\v ziti i saglasnost drugog deteta ili naslednika ako ga ima. Ako se dobije saglasnost, slu\v caj upotrebe se nastavlja u koraku 2, glavnog toka, u suprotnom, postupak se prekida.
+    \item Alternativni tok 3: Jo\v s neko ima pravo na nekretninu i u pitanju je do\v zivotno izdr\v zavanje. Treba pogledati i imovinsku raspravu. Ako je sve u redu, slu\v caj upotrebe se nastavlja u koraku 2 glavnog toka. U suprotnom se zavr\v sava slu\v caj upotrebe. 
+\end{itemize}
  \hline
 \end{longtable}
 \end{center}
